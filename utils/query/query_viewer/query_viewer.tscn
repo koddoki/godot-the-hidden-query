@@ -1,0 +1,48 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3uvkts87vjvc"]
+
+[ext_resource type="Script" path="res://utils/query/query_viewer/query_viewer.gd" id="1_lkgr3"]
+
+[node name="QueryViewer" type="ColorRect"]
+custom_minimum_size = Vector2(640, 340)
+color = Color(0.66899, 0.253292, 0.427056, 1)
+script = ExtResource("1_lkgr3")
+
+[node name="QueryViewer" type="VBoxContainer" parent="."]
+clip_contents = true
+layout_mode = 2
+offset_top = 4.0
+offset_right = 640.0
+offset_bottom = 344.0
+
+[node name="HBoxContainer" type="VBoxContainer" parent="QueryViewer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="TextEdit" type="TextEdit" parent="QueryViewer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 300)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "SELECT * FROM BATATINHA"
+
+[node name="MarginContainer" type="HBoxContainer" parent="QueryViewer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="ExecuteButton" type="Button" parent="QueryViewer/HBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(60, 40)
+layout_mode = 2
+text = "EXECUTAR"
+
+[node name="ResetButton" type="Button" parent="QueryViewer/HBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(60, 40)
+layout_mode = 2
+text = "RESETAR"
+
+[node name="HideButton" type="Button" parent="QueryViewer/HBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(60, 40)
+layout_mode = 2
+text = "ESCONDER"
+
+[connection signal="pressed" from="QueryViewer/HBoxContainer/MarginContainer/ExecuteButton" to="." method="_on_execute_button_pressed"]
+[connection signal="pressed" from="QueryViewer/HBoxContainer/MarginContainer/ResetButton" to="." method="_on_reset_button_pressed"]
+[connection signal="pressed" from="QueryViewer/HBoxContainer/MarginContainer/HideButton" to="." method="_on_hide_button_pressed"]

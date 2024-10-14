@@ -1,0 +1,97 @@
+[gd_scene load_steps=8 format=3 uid="uid://c00q2kbafg4n8"]
+
+[ext_resource type="Script" path="res://scenes/map/location/test_location_east/test_location_east.gd" id="1_2k0jb"]
+[ext_resource type="Texture2D" uid="uid://b0s4r7yoyoqh1" path="res://scenes/map/location/test_location/assets/mansion_east.png" id="2_fvhpj"]
+[ext_resource type="Texture2D" uid="uid://b1fjenvuef4kw" path="res://assets/ui/icons/white/arrowLeft.png" id="3_xpigg"]
+[ext_resource type="PackedScene" uid="uid://dsi30apnpoul0" path="res://utils/auto_scale_invisible_button/auto_scale_invisible_button.tscn" id="4_fg842"]
+
+[sub_resource type="Animation" id="Animation_esulv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_mlnyq"]
+resource_name = "fade"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.95, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vbbwx"]
+_data = {
+"RESET": SubResource("Animation_esulv"),
+"fade": SubResource("Animation_mlnyq")
+}
+
+[node name="TestLocationEast" type="Node2D"]
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("1_2k0jb")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(340, 320)
+texture = ExtResource("2_fvhpj")
+metadata/_edit_lock_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_vbbwx")
+}
+
+[node name="ArrowSouth" type="Sprite2D" parent="."]
+self_modulate = Color(0.937255, 0, 0, 1)
+position = Vector2(55, 436)
+rotation = 0.174533
+scale = Vector2(0.813992, 0.631096)
+texture = ExtResource("3_xpigg")
+
+[node name="Button" parent="ArrowSouth" instance=ExtResource("4_fg842")]
+offset_left = -54.0
+offset_top = -54.0
+offset_right = -46.0
+offset_bottom = -46.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[connection signal="pressed" from="ArrowSouth/Button" to="." method="_on_arrow_south_pressed"]

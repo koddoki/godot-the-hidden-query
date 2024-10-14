@@ -1,0 +1,148 @@
+[gd_scene load_steps=11 format=3 uid="uid://bbicnm88ywt5w"]
+
+[ext_resource type="Texture2D" uid="uid://fqdmfp7g3ale" path="res://scenes/map/location/test_location/assets/background.png" id="1_cvh8p"]
+[ext_resource type="Script" path="res://scenes/map/location/test_location/test_location.gd" id="1_wsrg7"]
+[ext_resource type="Texture2D" uid="uid://c8nk8crylprw" path="res://assets/ui/icons/white/arrowRight.png" id="2_y5j4p"]
+[ext_resource type="PackedScene" uid="uid://dsi30apnpoul0" path="res://utils/auto_scale_invisible_button/auto_scale_invisible_button.tscn" id="3_cbbs7"]
+[ext_resource type="Texture2D" uid="uid://f5gj6o4klpqs" path="res://assets/ui/icons/white/arrowUp.png" id="4_yqfhu"]
+[ext_resource type="Texture2D" uid="uid://b1fjenvuef4kw" path="res://assets/ui/icons/white/arrowLeft.png" id="5_c8waw"]
+[ext_resource type="Texture2D" uid="uid://desx5xogeqoyu" path="res://assets/ui/icons/black/warning.png" id="6_naibh"]
+
+[sub_resource type="Animation" id="Animation_3jtj6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_737q8"]
+resource_name = "fade"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.95, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qxkik"]
+_data = {
+"RESET": SubResource("Animation_3jtj6"),
+"fade": SubResource("Animation_737q8")
+}
+
+[node name="TestLocationSouth" type="Node2D"]
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("1_wsrg7")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(340, 320)
+texture = ExtResource("1_cvh8p")
+metadata/_edit_lock_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qxkik")
+}
+
+[node name="NpcSpawnPositions" type="Node2D" parent="."]
+
+[node name="NpcSpawnPosition" type="Node2D" parent="NpcSpawnPositions"]
+position = Vector2(466, 523)
+metadata/_edit_group_ = true
+
+[node name="Warning" type="Sprite2D" parent="NpcSpawnPositions/NpcSpawnPosition"]
+texture = ExtResource("6_naibh")
+
+[node name="AutoScaleInvisibleButton" parent="NpcSpawnPositions/NpcSpawnPosition" instance=ExtResource("3_cbbs7")]
+offset_left = -470.0
+offset_top = -527.0
+offset_right = -462.0
+offset_bottom = -519.0
+
+[node name="Arrows" type="Node2D" parent="."]
+
+[node name="ArrowWest" type="Sprite2D" parent="Arrows"]
+self_modulate = Color(0.937255, 0, 0, 1)
+position = Vector2(55, 436)
+rotation = 0.174533
+scale = Vector2(0.813992, 0.631096)
+texture = ExtResource("5_c8waw")
+
+[node name="Button" parent="Arrows/ArrowWest" instance=ExtResource("3_cbbs7")]
+offset_left = -54.0
+offset_top = -54.0
+offset_right = -46.0
+offset_bottom = -46.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="ArrowEast" type="Sprite2D" parent="Arrows"]
+self_modulate = Color(0.937255, 0, 0, 1)
+position = Vector2(598, 463)
+rotation = -0.174533
+scale = Vector2(0.813992, 0.631096)
+texture = ExtResource("2_y5j4p")
+
+[node name="Button" parent="Arrows/ArrowEast" instance=ExtResource("3_cbbs7")]
+offset_left = -54.0
+offset_top = -54.0
+offset_right = -46.0
+offset_bottom = -46.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="ArrowInside" type="Sprite2D" parent="Arrows"]
+self_modulate = Color(0.937255, 0, 0, 1)
+position = Vector2(279, 480)
+scale = Vector2(1, 0.395)
+texture = ExtResource("4_yqfhu")
+
+[node name="Button" parent="Arrows/ArrowInside" instance=ExtResource("3_cbbs7")]
+offset_left = -54.0
+offset_top = -54.0
+offset_right = -46.0
+offset_bottom = -46.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[connection signal="pressed" from="Arrows/ArrowWest/Button" to="." method="_on_arrow_west_pressed"]
+[connection signal="pressed" from="Arrows/ArrowEast/Button" to="." method="_on_arrow_east_pressed"]
+[connection signal="pressed" from="Arrows/ArrowInside/Button" to="." method="_on_auto_scale_invisible_button_pressed"]

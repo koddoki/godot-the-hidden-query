@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://mevl074yrg3p"]
+
+[ext_resource type="Script" path="res://utils/query/queries.gd" id="1_yhetf"]
+[ext_resource type="PackedScene" uid="uid://bpanxhjpujvdm" path="res://utils/query/query.tscn" id="2_fx6m4"]
+
+[node name="Queries" type="VBoxContainer"]
+offset_right = 648.0
+offset_bottom = 640.0
+theme_override_constants/separation = 0
+script = ExtResource("1_yhetf")
+dataset_path = "res://scenes/puzzles/Puzzle1/dataset.json"
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.297674, 0.155439, 0.528501, 1)
+
+[node name="Button" type="Button" parent="ColorRect"]
+layout_mode = 2
+offset_left = 536.0
+offset_top = 8.0
+offset_right = 632.0
+offset_bottom = 56.0
+text = "ADD"
+
+[node name="Scroll" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(330, 420)
+layout_mode = 2
+horizontal_scroll_mode = 0
+metadata/_edit_group_ = true
+
+[node name="QueriesContainer" type="VBoxContainer" parent="Scroll"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 0
+metadata/_edit_lock_ = true
+
+[node name="Query" parent="Scroll/QueriesContainer" instance=ExtResource("2_fx6m4")]
+layout_mode = 2
+cor = Color(0.298133, 0.287778, 0.695792, 1)
+
+[node name="Query2" parent="Scroll/QueriesContainer" instance=ExtResource("2_fx6m4")]
+layout_mode = 2
+
+[node name="Query3" parent="Scroll/QueriesContainer" instance=ExtResource("2_fx6m4")]
+layout_mode = 2
+cor = Color(0.774272, 0.417079, 0.161058, 1)

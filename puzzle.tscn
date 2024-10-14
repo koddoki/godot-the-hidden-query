@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://md333pglidxr"]
+
+[ext_resource type="Texture2D" uid="uid://wjygrfwf1s8i" path="res://assets/ui/icons/white/barsHorizontal.png" id="1_lam0c"]
+[ext_resource type="PackedScene" uid="uid://mevl074yrg3p" path="res://utils/query/queries.tscn" id="1_qwt6t"]
+
+[node name="Puzzle" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="BarsHorizontal" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(620, 56)
+scale = Vector2(0.655, 0.69)
+texture = ExtResource("1_lam0c")
+
+[node name="Up" type="Node2D" parent="."]
+
+[node name="FadeRect" type="ColorRect" parent="Up"]
+offset_right = 640.0
+offset_bottom = 640.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.404218, 0.418984, 0.590379, 1)
+metadata/_edit_lock_ = true
+
+[node name="Queries" parent="." instance=ExtResource("1_qwt6t")]
+offset_top = 480.0
+offset_bottom = 960.0

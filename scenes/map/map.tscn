@@ -1,0 +1,73 @@
+[gd_scene load_steps=7 format=3 uid="uid://bfnth31naskcq"]
+
+[ext_resource type="Script" path="res://scenes/map/map.gd" id="1_7s3yj"]
+[ext_resource type="Texture2D" uid="uid://db0sckuuemqyx" path="res://scenes/map/super-mario-map.png" id="2_o0qhk"]
+[ext_resource type="Script" path="res://scenes/map/drag_button.gd" id="3_dvgfv"]
+[ext_resource type="PackedScene" uid="uid://bbicnm88ywt5w" path="res://scenes/map/location/test_location/test_location.tscn" id="4_1jejx"]
+[ext_resource type="Script" path="res://scenes/map/current_node.gd" id="4_60tkr"]
+[ext_resource type="PackedScene" uid="uid://c00q2kbafg4n8" path="res://scenes/map/location/test_location_east/test_location_east.tscn" id="6_cftg0"]
+
+[node name="Map" type="Node2D"]
+script = ExtResource("1_7s3yj")
+
+[node name="WorldMapSubViewportContainer" type="SubViewportContainer" parent="."]
+clip_contents = true
+custom_minimum_size = Vector2(680, 640)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 2.0
+offset_right = 680.0
+offset_bottom = 642.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="WorldMapSubViewportContainer"]
+disable_3d = true
+handle_input_locally = false
+size = Vector2i(680, 640)
+render_target_update_mode = 4
+
+[node name="DragButton" type="TextureButton" parent="WorldMapSubViewportContainer/SubViewport"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -360.0
+offset_top = -320.0
+offset_right = 1079.0
+offset_bottom = 1694.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("2_o0qhk")
+texture_pressed = ExtResource("2_o0qhk")
+texture_hover = ExtResource("2_o0qhk")
+texture_disabled = ExtResource("2_o0qhk")
+texture_focused = ExtResource("2_o0qhk")
+script = ExtResource("3_dvgfv")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(0, 640)
+
+[node name="FadeRect" type="ColorRect" parent="Node2D"]
+offset_right = 680.0
+offset_bottom = 640.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.180392, 0.188235, 0.290196, 1)
+
+[node name="Locations" type="Node2D" parent="Node2D"]
+script = ExtResource("4_60tkr")
+
+[node name="TestLocationSouth" parent="Node2D/Locations" instance=ExtResource("4_1jejx")]
+
+[node name="TestLocationEast" parent="Node2D/Locations" instance=ExtResource("6_cftg0")]
+
+[connection signal="change_location" from="Node2D/Locations/TestLocationSouth" to="Node2D/Locations" method="change_location"]
+[connection signal="change_location" from="Node2D/Locations/TestLocationEast" to="Node2D/Locations" method="change_location"]

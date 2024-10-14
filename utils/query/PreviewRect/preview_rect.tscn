@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://ls2y2vqxushv"]
+
+[ext_resource type="Script" path="res://utils/query/PreviewRect/preview_rect.gd" id="1_iq3he"]
+
+[node name="PreviewRect" type="ColorRect"]
+custom_minimum_size = Vector2(640, 60)
+offset_right = 640.0
+offset_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.187076, 0.445366, 0.238507, 1)
+script = ExtResource("1_iq3he")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+offset_left = 536.0
+offset_top = 8.0
+offset_right = 632.0
+offset_bottom = 56.0
+text = "VER"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 520.0
+offset_bottom = 56.0
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget ipsum rutrum, gravida ipsum quis, tristique nisi. Fusce eleifend tortor nunc, sed commodo elit dapibus. "
+horizontal_alignment = 1
+vertical_alignment = 1
+text_overrun_behavior = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ly31r051h6ye"]
+
+[ext_resource type="Script" path="res://utils/draggable/draggable.gd" id="1_yah32"]
+
+[node name="Draggable" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("1_yah32")
