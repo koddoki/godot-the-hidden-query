@@ -2,6 +2,8 @@ extends Node
 
 
 var db : SQLite
+var sample_json_path = "res://utils/sql/sample_json.json"
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	db = SQLite.new()

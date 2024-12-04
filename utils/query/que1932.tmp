@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" path="res://utils/query/queries.gd" id="1_yhetf"]
 [ext_resource type="Script" path="res://utils/query/queries_container.gd" id="2_66u3f"]
-[ext_resource type="Script" path="res://utils/query/sql.gd" id="3_gxig1"]
+[ext_resource type="Script" path="res://utils/query/sql.gd" id="3_u7dqk"]
 
 [node name="Queries" type="VBoxContainer"]
 offset_right = 648.0
-offset_bottom = 760.0
+offset_bottom = 700.0
 theme_override_constants/separation = 0
 script = ExtResource("1_yhetf")
 metadata/_edit_lock_ = true
@@ -26,7 +26,7 @@ offset_bottom = 56.0
 text = "ADD"
 
 [node name="Scroll" type="ScrollContainer" parent="."]
-custom_minimum_size = Vector2(330, 580)
+custom_minimum_size = Vector2(330, 700)
 layout_mode = 2
 horizontal_scroll_mode = 0
 metadata/_edit_group_ = true
@@ -39,6 +39,6 @@ script = ExtResource("2_66u3f")
 metadata/_edit_lock_ = true
 
 [node name="SQL" type="Node" parent="."]
-script = ExtResource("3_gxig1")
+script = ExtResource("3_u7dqk")
 
 [connection signal="pressed" from="ColorRect/AddButton" to="." method="_on_add_button_pressed"]

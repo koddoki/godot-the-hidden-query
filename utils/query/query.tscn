@@ -1,10 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://bpanxhjpujvdm"]
+[gd_scene load_steps=14 format=3 uid="uid://bpanxhjpujvdm"]
 
 [ext_resource type="Script" path="res://utils/query/query.gd" id="1_yhetf"]
 [ext_resource type="PackedScene" uid="uid://ls2y2vqxushv" path="res://utils/query/PreviewRect/preview_rect.tscn" id="2_0j5ck"]
 [ext_resource type="PackedScene" uid="uid://cpj83madm873g" path="res://utils/query/query_result/query_result.tscn" id="3_otjdr"]
 [ext_resource type="PackedScene" uid="uid://c3uvkts87vjvc" path="res://utils/query/query_viewer/query_viewer.tscn" id="3_tk2w5"]
-[ext_resource type="Script" path="res://utils/query/query_result/query_result.gd" id="4_y6t62"]
 
 [sub_resource type="Animation" id="Animation_ykr8h"]
 length = 0.001
@@ -123,32 +122,32 @@ tracks/2/keys = {
 }]
 }
 
-[sub_resource type="Animation" id="Animation_8cd0f"]
-resource_name = "open_viewer"
+[sub_resource type="Animation" id="Animation_53gk2"]
+resource_name = "close_result"
 length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("QueryViewer:custom_minimum_size")
+tracks/0/path = NodePath("QueryResult:custom_minimum_size")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(640, 0), Vector2(640, 340)]
+"values": [Vector2(640, 340), Vector2(640, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("QueryViewer:visible")
+tracks/1/path = NodePath("QueryResult:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [true, true]
+"values": [true, false]
 }
 tracks/2/type = "method"
 tracks/2/imported = false
@@ -162,8 +161,8 @@ tracks/2/keys = {
 "values": []
 }
 
-[sub_resource type="Animation" id="Animation_rg35j"]
-resource_name = "open_result"
+[sub_resource type="Animation" id="Animation_wgs08"]
+resource_name = "close_result_and_viewer"
 length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -175,7 +174,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(640, 0), Vector2(640, 340)]
+"values": [Vector2(640, 340), Vector2(640, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -187,7 +186,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [true, true]
+"values": [true, false]
 }
 tracks/2/type = "method"
 tracks/2/imported = false
@@ -196,9 +195,12 @@ tracks/2/path = NodePath(".")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"values": []
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"animation_close_viewer"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_3s8qi"]
@@ -214,7 +216,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0, 340), Vector2(0, 0)]
+"values": [Vector2(640, 340), Vector2(640, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -271,10 +273,90 @@ tracks/1/keys = {
 "values": [true, true]
 }
 
+[sub_resource type="Animation" id="Animation_rg35j"]
+resource_name = "open_result"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("QueryResult:custom_minimum_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(640, 0), Vector2(640, 340)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("QueryResult:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"values": []
+}
+
+[sub_resource type="Animation" id="Animation_8cd0f"]
+resource_name = "open_viewer"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("QueryViewer:custom_minimum_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(640, 0), Vector2(640, 340)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("QueryViewer:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"values": []
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ve31d"]
 _data = {
 "RESET": SubResource("Animation_ykr8h"),
 "close_previewer": SubResource("Animation_6l6dr"),
+"close_result": SubResource("Animation_53gk2"),
+"close_result_and_viewer": SubResource("Animation_wgs08"),
 "close_viewer": SubResource("Animation_3s8qi"),
 "open_previewer": SubResource("Animation_62yd7"),
 "open_result": SubResource("Animation_rg35j"),
@@ -283,11 +365,11 @@ _data = {
 
 [node name="Query" type="VBoxContainer"]
 script = ExtResource("1_yhetf")
-cor = Color(0.0608326, 0.411269, 0.376441, 1)
 
 [node name="QueryPreviewer" parent="." instance=ExtResource("2_0j5ck")]
 clip_contents = true
 layout_mode = 2
+metadata/_edit_group_ = true
 
 [node name="QueryViewer" parent="." instance=ExtResource("3_tk2w5")]
 visible = false
@@ -301,13 +383,15 @@ visible = false
 clip_contents = true
 custom_minimum_size = Vector2(640, 0)
 layout_mode = 2
-script = ExtResource("4_y6t62")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_ve31d")
 }
 
+[connection signal="delete_button_pressed" from="QueryPreviewer" to="." method="_on_query_previewer_delete_button_pressed"]
 [connection signal="view_button_pressed" from="QueryPreviewer" to="." method="_on_query_previewer_view_button_pressed"]
 [connection signal="execute_button_pressed" from="QueryViewer" to="." method="_on_query_viewer_execute_button_pressed"]
 [connection signal="hide_button_pressed" from="QueryViewer" to="." method="_on_query_viewer_hide_button_pressed"]
+[connection signal="reset_button_pressed" from="QueryViewer" to="." method="_on_query_viewer_reset_button_pressed"]
+[connection signal="answer" from="QueryResult" to="." method="_on_query_result_answer"]

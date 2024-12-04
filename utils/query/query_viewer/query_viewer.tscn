@@ -6,6 +6,7 @@
 custom_minimum_size = Vector2(640, 340)
 color = Color(0.66899, 0.253292, 0.427056, 1)
 script = ExtResource("1_lkgr3")
+metadata/_edit_lock_ = true
 
 [node name="QueryViewer" type="VBoxContainer" parent="."]
 clip_contents = true

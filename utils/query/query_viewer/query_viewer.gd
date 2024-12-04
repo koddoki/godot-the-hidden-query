@@ -1,6 +1,8 @@
 extends ColorRect
 
+
 signal execute_button_pressed
+signal reset_button_pressed
 signal hide_button_pressed
 
 
@@ -17,6 +19,7 @@ func _on_execute_button_pressed() -> void:
 
 func _on_reset_button_pressed() -> void:
 	text_edit.text = ""
+	reset_button_pressed.emit()
 
 
 func _on_hide_button_pressed() -> void:

@@ -1,8 +1,11 @@
-[gd_scene format=3 uid="uid://cpj83madm873g"]
+[gd_scene load_steps=2 format=3 uid="uid://cpj83madm873g"]
+
+[ext_resource type="Script" path="res://utils/query/query_result/query_result.gd" id="1_6hwf0"]
 
 [node name="QueryResult" type="ColorRect"]
 custom_minimum_size = Vector2(640, 340)
 color = Color(0.326239, 0.692828, 0.704747, 1)
+script = ExtResource("1_6hwf0")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 custom_minimum_size = Vector2(640, 340)
@@ -23,3 +26,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 clip_text = true
+
+[node name="Answer" type="Button" parent="."]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 272.0
+offset_right = 384.0
+offset_bottom = 320.0
+text = "Responder"
+
+[connection signal="pressed" from="Answer" to="." method="_on_answer_pressed"]
