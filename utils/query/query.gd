@@ -1,5 +1,7 @@
 extends VBoxContainer
 
+class_name Query
+
 @export var cor := Color.WHITE
 
 
@@ -9,7 +11,7 @@ extends VBoxContainer
 @onready var animation = $AnimationPlayer
 @onready var rng = RandomNumberGenerator.new()
 
-signal answer(query : String)
+signal answer(result : Array[Dictionary])
 
 
 func _ready() -> void:
@@ -96,5 +98,6 @@ func _on_query_previewer_delete_button_pressed() -> void:
 	queue_free()
 
 
-func _on_query_result_answer(query : String) -> void:
-	answer.emit(query)
+func _on_query_result_answer(result : Array[Dictionary]) -> void:
+	print("diadidia")
+	answer.emit(result)

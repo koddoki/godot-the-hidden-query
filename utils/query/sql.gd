@@ -26,3 +26,12 @@ func create_table(table_name : String, table : Dictionary) -> void:
 func insert_row(table_name : String, row : Dictionary) -> void:
 	print("Inserting into " + table_name)
 	database.insert_row(table_name, row)
+
+
+func delete_from_table(table : String):
+	database.query("DELETE FROM " + table)
+
+
+func query(query : String) -> Array[Dictionary]:
+	database.query(query)
+	return database.query_result

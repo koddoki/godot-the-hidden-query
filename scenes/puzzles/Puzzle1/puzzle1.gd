@@ -1,9 +1,11 @@
 extends Node2D
 
-@onready var queries := $Queries
+@onready var sql = $Queries.sql
 
 func _ready() -> void:
 	prepare_database()
+	var batata = sql.query("SELECT * FROM teste")
+	print(batata)
 
 
 func prepare_database():
@@ -13,17 +15,18 @@ func prepare_database():
 		"score" : {"data_type" : "int"}
 	}
 	
-	queries.create_table("teste", table)
+	sql.create_table("teste", table)
+	# sql.delete_from_table("teste")
 	
-	var puzzle_data := generate_puzzle_data()
+	generate_puzzle_data()
 
-func generate_puzzle_data() -> Dictionary:
+func generate_puzzle_data() -> void:
 	var data : Dictionary = {
 		"name" : "batata",
 		"score" : 123
 	}
 	
-	return data
+	sql.insert_row("teste", data)
 
 
 func _on_queries_answer(query: String) -> void:
