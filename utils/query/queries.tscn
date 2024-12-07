@@ -6,7 +6,7 @@
 
 [node name="Queries" type="VBoxContainer"]
 offset_right = 648.0
-offset_bottom = 760.0
+offset_bottom = 640.0
 theme_override_constants/separation = 0
 script = ExtResource("1_yhetf")
 metadata/_edit_lock_ = true
@@ -26,7 +26,7 @@ offset_bottom = 56.0
 text = "ADD"
 
 [node name="Scroll" type="ScrollContainer" parent="."]
-custom_minimum_size = Vector2(330, 580)
+custom_minimum_size = Vector2(330, 420)
 layout_mode = 2
 horizontal_scroll_mode = 0
 metadata/_edit_group_ = true
