@@ -12,6 +12,7 @@ class_name Query
 @onready var rng = RandomNumberGenerator.new()
 
 signal answer(result : Array[Dictionary])
+signal execute_query(query_string : String, query_node : Query)
 
 
 func _ready() -> void:
@@ -77,7 +78,9 @@ func _on_query_previewer_view_button_pressed() -> void:
 	animation_close_previewer()
 
 
-func _on_query_viewer_execute_button_pressed() -> void:
+func _on_query_viewer_execute_button_pressed(text : String) -> void:
+	print("_on_query_viewer_execute_button_pressed")
+	execute_query.emit(text, self)
 	animation_open_result()
 
 
@@ -99,5 +102,4 @@ func _on_query_previewer_delete_button_pressed() -> void:
 
 
 func _on_query_result_answer(result : Array[Dictionary]) -> void:
-	print("diadidia")
 	answer.emit(result)

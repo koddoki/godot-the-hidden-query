@@ -4,6 +4,7 @@ extends VBoxContainer
 
 @onready var queries_container := $Scroll/QueriesContainer
 @onready var sql := $SQL
+var current_ongoing_query : Query
 
 signal answer(data : Array[Dictionary])
 
@@ -18,5 +19,12 @@ func _on_add_button_pressed() -> void:
 
 
 func _on_queries_container_answer(result: Array[Dictionary]) -> void:
-	print("CHEGO AQUIIIIIIIIIII \n" + str(result))
 	answer.emit(result)
+
+
+func _on_queries_container_execute_query(query_string: String, query_node : Query) -> void:
+	print("_on_queries_container_execute_query")
+	current_ongoing_query = query_node
+	var batata = sql.execute_query(query_string)
+	query_node.result.update_result(batata)
+	

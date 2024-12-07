@@ -32,6 +32,6 @@ func delete_from_table(table : String):
 	database.query("DELETE FROM " + table)
 
 
-func query(query : String) -> Array[Dictionary]:
+func execute_query(query : String) -> Array[Dictionary]:
 	database.query(query)
 	return database.query_result

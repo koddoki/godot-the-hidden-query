@@ -23,7 +23,6 @@ theme_override_constants/separation = 0
 custom_minimum_size = Vector2(100, 300)
 layout_mode = 2
 size_flags_horizontal = 3
-text = "SELECT * FROM BATATINHA"
 
 [node name="MarginContainer" type="HBoxContainer" parent="QueryViewer/HBoxContainer"]
 layout_mode = 2

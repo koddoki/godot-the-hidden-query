@@ -4,7 +4,7 @@ extends Node2D
 
 func _ready() -> void:
 	prepare_database()
-	var batata = sql.query("SELECT * FROM teste")
+	var batata = sql.execute_query("SELECT * FROM teste")
 	print(batata)
 
 
