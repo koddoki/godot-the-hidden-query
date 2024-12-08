@@ -28,6 +28,11 @@ func insert_row(table_name : String, row : Dictionary) -> void:
 	database.insert_row(table_name, row)
 
 
+func insert_rows(table_name : String, row : Array[Dictionary]) -> void:
+	print("Inserting into " + table_name)
+	database.insert_rows(table_name, row)
+
+
 func delete_from_table(table : String):
 	database.query("DELETE FROM " + table)
 

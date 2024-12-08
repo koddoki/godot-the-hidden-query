@@ -1,0 +1,65 @@
+[gd_scene load_steps=11 format=3 uid="uid://tdsoynp7d7xi"]
+
+[ext_resource type="Script" path="res://scenes/ui/menu_button/menu_button.gd" id="1_gqcr1"]
+[ext_resource type="Texture2D" uid="uid://cairmwmgogykb" path="res://assets/ui/tiles/kenney_pixel_adventure/tile_0056.png" id="1_ks4th"]
+[ext_resource type="Texture2D" uid="uid://b7swuytspeu47" path="res://assets/ui/tiles/kenney_pixel_adventure/tile_0057.png" id="2_7d4dv"]
+[ext_resource type="Texture2D" uid="uid://y2yjljqs0e16" path="res://assets/ui/tiles/kenney_pixel_adventure/tile_0058.png" id="3_v8bll"]
+[ext_resource type="FontFile" uid="uid://kj2mj3v04314" path="res://assets/fonts/Kenney Mini Square Mono.ttf" id="4_m7ahq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3v1ab"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gacr6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5q2ec"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wv02m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5qj10"]
+
+[node name="MenuButton" type="Node2D"]
+script = ExtResource("1_gqcr1")
+
+[node name="Left" type="Sprite2D" parent="."]
+position = Vector2(-96, 0)
+scale = Vector2(3, 3)
+texture = ExtResource("1_ks4th")
+
+[node name="Middle" type="Sprite2D" parent="."]
+position = Vector2(0, -8)
+scale = Vector2(3, 3)
+texture = ExtResource("2_7d4dv")
+
+[node name="Right" type="Sprite2D" parent="."]
+position = Vector2(96, 0)
+scale = Vector2(3, 3)
+texture = ExtResource("3_v8bll")
+
+[node name="LabelHolder" type="Node2D" parent="."]
+
+[node name="Label" type="Label" parent="LabelHolder"]
+offset_left = -48.0
+offset_top = -40.0
+offset_right = 272.0
+offset_bottom = 147.0
+scale = Vector2(0.3, 0.3)
+theme_override_fonts/font = ExtResource("4_m7ahq")
+theme_override_font_sizes/font_size = 56
+text = "START"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+offset_left = -136.0
+offset_top = -32.0
+offset_right = 136.0
+offset_bottom = 32.0
+mouse_filter = 1
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3v1ab")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_gacr6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5q2ec")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wv02m")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5qj10")
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

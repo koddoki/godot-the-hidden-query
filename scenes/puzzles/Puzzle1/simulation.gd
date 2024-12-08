@@ -3,11 +3,6 @@ extends Node2D
 @onready var tilemap_layers := $TileMapLayers
 @onready var people_nodes := $People
 
-func _ready() -> void:
-	var test : Array[String] = ["Douglas", "Adriana"]
-	focus_on_people(test)
-
-
 
 func reset_color():
 	tilemap_layers.modulate = Color.WHITE

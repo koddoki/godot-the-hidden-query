@@ -1,0 +1,407 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6tg1l8pm2s2s"]
+
+[ext_resource type="Script" path="res://scenes/cutscene_manager/dialogue_scene.gd" id="1_fahto"]
+
+[node name="DialogueScene" type="Node2D"]
+script = ExtResource("1_fahto")
+metadata/_edit_lock_ = true
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 640.0
+offset_bottom = 480.0
+expand_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="SpawnPositions" type="VBoxContainer" parent="."]
+offset_right = 640.0
+offset_bottom = 480.0
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Row1" type="HBoxContainer" parent="SpawnPositions"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Column1" type="TextureRect" parent="SpawnPositions/Row1"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpawningPoint" type="Control" parent="SpawnPositions/Row1/Column1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Column2" type="TextureRect" parent="SpawnPositions/Row1"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpawningPoint" type="Control" parent="SpawnPositions/Row1/Column2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Column3" type="TextureRect" parent="SpawnPositions/Row1"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpawningPoint" type="Control" parent="SpawnPositions/Row1/Column3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Column4" type="TextureRect" parent="SpawnPositions/Row1"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpawningPoint" type="Control" parent="SpawnPositions/Row1/Column4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Column5" type="TextureRect" parent="SpawnPositions/Row1"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpawningPoint" type="Control" parent="SpawnPositions/Row1/Column5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Column6" type="TextureRect" parent="SpawnPositions/Row1"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpawningPoint" type="Control" parent="SpawnPositions/Row1/Column6"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Row2" type="HBoxContainer" parent="SpawnPositions"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Column1" type="TextureRect" parent="SpawnPositions/Row2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpawningPoint" type="Control" parent="SpawnPositions/Row2/Column1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Column2" type="TextureRect" parent="SpawnPositions/Row2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpawningPoint" type="Control" parent="SpawnPositions/Row2/Column2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Column3" type="TextureRect" parent="SpawnPositions/Row2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpawningPoint" type="Control" parent="SpawnPositions/Row2/Column3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Column4" type="TextureRect" parent="SpawnPositions/Row2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpawningPoint" type="Control" parent="SpawnPositions/Row2/Column4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Column5" type="TextureRect" parent="SpawnPositions/Row2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpawningPoint" type="Control" parent="SpawnPositions/Row2/Column5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Column6" type="TextureRect" parent="SpawnPositions/Row2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpawningPoint" type="Control" parent="SpawnPositions/Row2/Column6"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Row3" type="HBoxContainer" parent="SpawnPositions"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Column1" type="TextureRect" parent="SpawnPositions/Row3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpawningPoint" type="Control" parent="SpawnPositions/Row3/Column1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Column2" type="TextureRect" parent="SpawnPositions/Row3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpawningPoint" type="Control" parent="SpawnPositions/Row3/Column2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Column3" type="TextureRect" parent="SpawnPositions/Row3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpawningPoint" type="Control" parent="SpawnPositions/Row3/Column3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Column4" type="TextureRect" parent="SpawnPositions/Row3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpawningPoint" type="Control" parent="SpawnPositions/Row3/Column4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Column5" type="TextureRect" parent="SpawnPositions/Row3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpawningPoint" type="Control" parent="SpawnPositions/Row3/Column5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Column6" type="TextureRect" parent="SpawnPositions/Row3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpawningPoint" type="Control" parent="SpawnPositions/Row3/Column6"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Row4" type="HBoxContainer" parent="SpawnPositions"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Column1" type="TextureRect" parent="SpawnPositions/Row4"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpawningPoint" type="Control" parent="SpawnPositions/Row4/Column1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Column2" type="TextureRect" parent="SpawnPositions/Row4"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpawningPoint" type="Control" parent="SpawnPositions/Row4/Column2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Column3" type="TextureRect" parent="SpawnPositions/Row4"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpawningPoint" type="Control" parent="SpawnPositions/Row4/Column3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Column4" type="TextureRect" parent="SpawnPositions/Row4"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpawningPoint" type="Control" parent="SpawnPositions/Row4/Column4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Column5" type="TextureRect" parent="SpawnPositions/Row4"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpawningPoint" type="Control" parent="SpawnPositions/Row4/Column5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Column6" type="TextureRect" parent="SpawnPositions/Row4"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpawningPoint" type="Control" parent="SpawnPositions/Row4/Column6"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Characters" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 32.0
+offset_top = 512.0
+offset_right = 608.0
+offset_bottom = 928.0
+color = Color(0.419608, 0.419608, 0.419608, 0.654902)
+
+[node name="Title" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 560.0
+offset_bottom = 64.0
+text = "Nome de quem ta falando"
+vertical_alignment = 1
+
+[node name="Text" type="RichTextLabel" parent="ColorRect"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 72.0
+offset_right = 560.0
+offset_bottom = 360.0
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac aliquam nibh. Etiam dignissim mollis mi, vestibulum imperdiet neque pharetra sed. Vivamus accumsan accumsan nibh et rhoncus. Morbi odio felis, pellentesque id leo sed, semper efficitur magna. Nullam mattis ipsum in orci ultricies pulvinar. Donec in eleifend tortor, vel cursus mauris. Phasellus maximus tempus elit, a laoreet libero aliquet non. "
+
+[node name="NextButton" type="Button" parent="ColorRect"]
+offset_left = 456.0
+offset_top = 24.0
+offset_right = 560.0
+offset_bottom = 55.0
+text = "PRÓXIMO"
+
+[connection signal="pressed" from="ColorRect/NextButton" to="." method="_on_next_button_pressed"]

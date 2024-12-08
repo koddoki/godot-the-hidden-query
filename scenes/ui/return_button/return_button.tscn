@@ -1,0 +1,35 @@
+[gd_scene load_steps=8 format=3 uid="uid://cjivuit31t74i"]
+
+[ext_resource type="Texture2D" uid="uid://3o25lc1jfcwo" path="res://assets/ui/tiles/kenney_pixel_adventure/tile_0031.png" id="1_b7tjo"]
+[ext_resource type="Script" path="res://scenes/ui/return_button/return_button.gd" id="2_aood7"]
+[ext_resource type="Texture2D" uid="uid://bxdkhwe3bphyj" path="res://assets/ui/icons/white/return.png" id="2_xhts0"]
+[ext_resource type="PackedScene" uid="uid://dsi30apnpoul0" path="res://utils/auto_scale_invisible_button/auto_scale_invisible_button.tscn" id="3_5egs3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_se637"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rhdv2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mckf7"]
+
+[node name="ReturnButton" type="Sprite2D"]
+scale = Vector2(4, 4)
+texture = ExtResource("1_b7tjo")
+script = ExtResource("2_aood7")
+
+[node name="ReturnSprite" type="Sprite2D" parent="."]
+modulate = Color(0.95048, 0.403224, 0.333299, 1)
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("2_xhts0")
+
+[node name="Button" parent="." instance=ExtResource("3_5egs3")]
+offset_left = -16.0
+offset_top = -16.0
+offset_right = -8.0
+offset_bottom = -8.0
+theme_override_styles/hover = SubResource("StyleBoxEmpty_se637")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_rhdv2")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_mckf7")
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

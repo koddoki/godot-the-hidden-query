@@ -1,11 +1,189 @@
-[gd_scene load_steps=5 format=3 uid="uid://b6iw440l3y03r"]
+[gd_scene load_steps=16 format=3 uid="uid://b6iw440l3y03r"]
 
-[ext_resource type="Texture2D" uid="uid://ckbim0mpdapkl" path="res://assets/ui/tiles/kenney_pixel_adventure/tile_0000.png" id="1_ivoro"]
-[ext_resource type="Texture2D" uid="uid://1s26gdouloxs" path="res://assets/ui/icons/white/right.png" id="2_4obks"]
-[ext_resource type="PackedScene" uid="uid://dsi30apnpoul0" path="res://utils/auto_scale_invisible_button/auto_scale_invisible_button.tscn" id="3_ruuml"]
+[ext_resource type="Script" path="res://scenes/menu/main_menu/main_menu.gd" id="1_g3da8"]
 [ext_resource type="FontFile" uid="uid://dx0leo3qtvu16" path="res://assets/fonts/Kenney Mini.ttf" id="4_8lj8e"]
+[ext_resource type="Script" path="res://scenes/menu/main_menu/credits.gd" id="6_6ohxu"]
+[ext_resource type="PackedScene" uid="uid://tdsoynp7d7xi" path="res://scenes/ui/menu_button/menu_button.tscn" id="6_hlnau"]
+[ext_resource type="PackedScene" uid="uid://f8oerqgg0xd5" path="res://scenes/ui/fade_rect/fade_rect.tscn" id="7_puinn"]
+[ext_resource type="PackedScene" uid="uid://cjivuit31t74i" path="res://scenes/ui/return_button/return_button.tscn" id="8_tf1m1"]
+[ext_resource type="Texture2D" uid="uid://b3nl82e2ymc8n" path="res://assets/ui/tiles/kenney_pixel_adventure/tile_0026.png" id="9_ol41y"]
+[ext_resource type="FontFile" uid="uid://cb0ghp4306be5" path="res://assets/fonts/Kenney Pixel.ttf" id="10_05glt"]
+[ext_resource type="Script" path="res://scenes/menu/main_menu/about.gd" id="10_jvaro"]
+
+[sub_resource type="Animation" id="Animation_x0ksw"]
+resource_name = "open_credits"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Credits:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Credits:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_p8dy7"]
+resource_name = "open_about"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("About:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("About:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_mxqf7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("About:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Credits:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Credits:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("About:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_hmjdi"]
+resource_name = "close_about"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("About:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("About:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_arrpo"]
+resource_name = "close_credits"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Credits:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Credits:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p234i"]
+_data = {
+"RESET": SubResource("Animation_mxqf7"),
+"close_about": SubResource("Animation_hmjdi"),
+"close_credits": SubResource("Animation_arrpo"),
+"open_about": SubResource("Animation_p8dy7"),
+"open_credits": SubResource("Animation_x0ksw")
+}
 
 [node name="MainMenu" type="Node2D"]
+script = ExtResource("1_g3da8")
 metadata/_edit_lock_ = true
 
 [node name="BackgroundRect" type="ColorRect" parent="."]
@@ -14,32 +192,150 @@ offset_bottom = 960.0
 color = Color(0.306608, 0.567282, 0.794374, 1)
 metadata/_edit_lock_ = true
 
-[node name="Moldure" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(328, 744)
-scale = Vector2(5, 5)
-texture = ExtResource("1_ivoro")
+[node name="Label" type="RichTextLabel" parent="."]
+offset_top = 144.0
+offset_right = 640.0
+offset_bottom = 320.0
+theme_override_fonts/normal_font = ExtResource("4_8lj8e")
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+text = "[center][wave amp=50.0 freq=5.0 connected=1]The
+Hidden Query"
+
+[node name="StartButton" parent="." instance=ExtResource("6_hlnau")]
+position = Vector2(320, 488)
+
+[node name="AboutButton" parent="." instance=ExtResource("6_hlnau")]
+position = Vector2(320, 624)
+label_text = "ABOUT"
+
+[node name="CreditsButton" parent="." instance=ExtResource("6_hlnau")]
+position = Vector2(320, 760)
+label_text = "CREDITS"
+
+[node name="FadeRect" parent="." instance=ExtResource("7_puinn")]
+mouse_filter = 2
+
+[node name="Credits" type="Node2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("6_6ohxu")
 metadata/_edit_group_ = true
 
-[node name="Right" type="Sprite2D" parent="Moldure"]
-modulate = Color(0.860942, 0.297016, 0.216713, 1)
-texture_filter = 1
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("2_4obks")
-
-[node name="AutoScaleInvisibleButton" parent="Moldure" instance=ExtResource("3_ruuml")]
-offset_left = -16.0
-offset_top = -16.0
-offset_right = -8.0
-offset_bottom = -8.0
-
-[node name="Label" type="Label" parent="."]
-offset_top = 168.0
-offset_right = 640.0
-offset_bottom = 331.0
-theme_override_fonts/font = ExtResource("4_8lj8e")
-theme_override_font_sizes/font_size = 64
-text = "The
-Hidden Query"
-horizontal_alignment = 1
+[node name="MenuBox" type="Sprite2D" parent="Credits"]
+position = Vector2(320, 484)
+scale = Vector2(16.5, 26.25)
+texture = ExtResource("9_ol41y")
 metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="Credits"]
+offset_left = 136.0
+offset_top = 249.0
+offset_right = 504.0
+offset_bottom = 345.0
+theme_override_colors/font_color = Color(0.212305, 0.212305, 0.212305, 1)
+theme_override_fonts/font = ExtResource("10_05glt")
+theme_override_font_sizes/font_size = 40
+text = "Sourcecode: Bruno Lopes"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="GithubLinkButton" type="LinkButton" parent="Credits"]
+offset_left = 192.0
+offset_top = 321.0
+offset_right = 254.0
+offset_bottom = 345.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_05glt")
+theme_override_font_sizes/font_size = 32
+text = "github"
+uri = "https://github.com/koddoki"
+
+[node name="GithubLinkButton2" type="LinkButton" parent="Credits"]
+offset_left = 272.0
+offset_top = 481.0
+offset_right = 370.0
+offset_bottom = 505.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_05glt")
+theme_override_font_sizes/font_size = 32
+text = "kenney.nl"
+uri = "https://kenney.nl/"
+
+[node name="LinkedinLinkButton" type="LinkButton" parent="Credits"]
+offset_left = 368.0
+offset_top = 321.0
+offset_right = 446.0
+offset_bottom = 345.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_05glt")
+theme_override_font_sizes/font_size = 32
+text = "linkedin"
+uri = "https://www.linkedin.com/in/bruno-vinicius-lopes/"
+
+[node name="Label2" type="Label" parent="Credits"]
+offset_left = 136.0
+offset_top = 393.0
+offset_right = 504.0
+offset_bottom = 489.0
+theme_override_colors/font_color = Color(0.212305, 0.212305, 0.212305, 1)
+theme_override_fonts/font = ExtResource("10_05glt")
+theme_override_font_sizes/font_size = 32
+text = "Visual assets were made by Kenney
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="ReturnButton" parent="Credits" instance=ExtResource("8_tf1m1")]
+position = Vector2(320, 712)
+
+[node name="About" type="Node2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("10_jvaro")
+metadata/_edit_group_ = true
+
+[node name="MenuBox" type="Sprite2D" parent="About"]
+position = Vector2(320, 484)
+scale = Vector2(16.5, 26.25)
+texture = ExtResource("9_ol41y")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="About"]
+offset_left = 136.0
+offset_top = 272.0
+offset_right = 504.0
+offset_bottom = 632.0
+theme_override_colors/font_color = Color(0.212305, 0.212305, 0.212305, 1)
+theme_override_fonts/font = ExtResource("10_05glt")
+theme_override_font_sizes/font_size = 40
+text = "This project was made as my Software Engineering bachelor degree course conclusion project.
+
+It's intention is to teach the foundations of SQL in an interactive and visual friendly manner.
+
+Enjoy your time!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="ReturnButton" parent="About" instance=ExtResource("8_tf1m1")]
+position = Vector2(320, 712)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_p234i")
+}
+
+[connection signal="button_pressed" from="StartButton" to="." method="_on_start_button_button_pressed"]
+[connection signal="button_pressed" from="AboutButton" to="." method="_on_about_button_button_pressed"]
+[connection signal="button_pressed" from="CreditsButton" to="." method="_on_credits_button_button_pressed"]
+[connection signal="pressed" from="Credits/ReturnButton" to="." method="_on_credits_return_button_pressed"]
+[connection signal="pressed" from="About/ReturnButton" to="." method="_on_about_return_button_pressed"]

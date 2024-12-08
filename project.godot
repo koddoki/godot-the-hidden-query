@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="The Hidden Query"
+run/main_scene="res://scenes/menu/main_menu/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"
+
+[autoload]
+
+SceneSwitcher="*res://utils/scene_switcher.gd"
 
 [display]
 

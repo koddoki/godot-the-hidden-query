@@ -7,6 +7,7 @@ extends VBoxContainer
 var current_ongoing_query : Query
 
 signal answer(data : Array[Dictionary])
+signal reset
 
 
 func _ready() -> void:
