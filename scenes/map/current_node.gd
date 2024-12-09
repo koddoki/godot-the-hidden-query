@@ -2,8 +2,7 @@ extends Node2D
 
 
 func _ready():
-	get_node("TestLocationSouth").visible = true
-	get_node("TestLocationSouth").animation.play_backwards("fade")
+	pass
 
 
 func change_location(next_location_name : String) -> void:
