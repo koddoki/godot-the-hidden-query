@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=4 uid="uid://dwsww3trh2pxk"]
+
+[ext_resource type="Script" path="res://scenes/map/location/locations/location_1/location_1.gd" id="1_1gvqa"]
+[ext_resource type="Texture2D" uid="uid://bcejxitnw5qf7" path="res://assets/ui/tiles/kenney_background_elements/backgrounds/backgroundColorGrass.png" id="1_6k01c"]
+[ext_resource type="TileSet" uid="uid://48rxcclb0x4y" path="res://assets/tileset/platformer_building_art.tres" id="2_p0fdr"]
+[ext_resource type="Texture2D" uid="uid://ck51658u3bl0q" path="res://assets/ui/tiles/kenney_background_elements/props/bushOrange4.png" id="3_xv8a8"]
+[ext_resource type="Texture2D" uid="uid://qecol834si1l" path="res://assets/ui/tiles/kenney_background_elements/props/bushAlt1.png" id="4_phb8w"]
+[ext_resource type="Texture2D" uid="uid://bcn1hnxe116df" path="res://assets/ui/tiles/kenney_background_elements/props/bushOrange3.png" id="5_l17cd"]
+[ext_resource type="PackedScene" uid="uid://buv72ldtgmluj" path="res://scenes/ui/arrows/arrow_up.tscn" id="6_tompa"]
+
+[node name="Location1" type="Node2D"]
+script = ExtResource("1_1gvqa")
+
+[node name="BackgroundCastles" type="Sprite2D" parent="."]
+position = Vector2(320, 240)
+scale = Vector2(0.625, 0.46875)
+texture = ExtResource("1_6k01c")
+metadata/_edit_lock_ = true
+
+[node name="Tilemaps" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="ScenarioLayer" type="TileMapLayer" parent="Tilemaps"]
+tile_map_data = PackedByteArray("AAAHAAQAxwABAAQAAAAHAAUAxwAAAAEAAAAHAAYAxwAAAAIAAAAIAAQAxwABAAQAAAAIAAUAxwAJAAMAAAAIAAYAxwABAAIAAAAIAAMAxwABAAMAAAAHAAMAxwABAAMAAAAGAAMAxwAAAAMAAAAGAAQAxwAAAAQAAAAJAAMAxwABAAMAAAAJAAQAxwABAAQAAAAJAAUAxwACAAEAAAAJAAYAxwACAAIAAAAAAAEAxwABAAMAAAAAAAIAxwABAAQAAAABAAEAxwABAAMAAAABAAIAxwABAAQAAAABAAMAxwAJAAAAAAABAAQAxwABAAIAAAACAAEAxwABAAMAAAACAAIAxwABAAQAAAACAAMAxwAJAAMAAAACAAQAxwABAAIAAAADAAEAxwABAAMAAAADAAIAxwABAAQAAAD//wEAxwAAAAMAAAD//wIAxwAAAAQAAAAAAAMAxwAJAAMAAAAAAAQAxwABAAIAAAADAAMAxwACAAEAAAADAAQAxwACAAIAAAAEAAEAxwACAAMAAAAEAAIAxwACAAQAAAA=")
+tile_set = ExtResource("2_p0fdr")
+metadata/_edit_lock_ = true
+
+[node name="PropsLayer" type="TileMapLayer" parent="Tilemaps"]
+tile_map_data = PackedByteArray("AAAIAAUAxwALAAIAAAAJAAUAxwANAAAAAAAJAAYAxwANAAEAAAABAAMAxwANAAAAAAABAAQAxwANAAEAAAACAAMAxwALAAIAAAA=")
+tile_set = ExtResource("2_p0fdr")
+metadata/_edit_lock_ = true
+
+[node name="Props" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="BushOrange4" type="Sprite2D" parent="Props"]
+position = Vector2(256, 328)
+texture = ExtResource("3_xv8a8")
+
+[node name="BushAlt1" type="Sprite2D" parent="Props"]
+position = Vector2(440, 448)
+texture = ExtResource("4_phb8w")
+
+[node name="BushOrange3" type="Sprite2D" parent="Props"]
+position = Vector2(37.4327, 331)
+scale = Vector2(0.673077, 0.673077)
+texture = ExtResource("5_l17cd")
+
+[node name="Arrows" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="ArrowUp" parent="Arrows" instance=ExtResource("6_tompa")]
+position = Vector2(344, 288)
+location_number = 2
+
+[connection signal="pressed" from="Arrows/ArrowUp" to="." method="_on_arrow_pressed"]

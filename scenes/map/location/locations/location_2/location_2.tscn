@@ -1,0 +1,135 @@
+[gd_scene load_steps=11 format=4 uid="uid://bpqfxit5t0i0o"]
+
+[ext_resource type="Script" path="res://scenes/map/location/locations/location_2/location_2.gd" id="1_6s1vx"]
+[ext_resource type="Texture2D" uid="uid://bcejxitnw5qf7" path="res://assets/ui/tiles/kenney_background_elements/backgrounds/backgroundColorGrass.png" id="2_fls6r"]
+[ext_resource type="Texture2D" uid="uid://coi7w2ps4nbee" path="res://assets/ui/tiles/kenney_background_elements/props/fence.png" id="3_nak50"]
+[ext_resource type="TileSet" uid="uid://48rxcclb0x4y" path="res://assets/tileset/platformer_building_art.tres" id="4_ay6ib"]
+[ext_resource type="Texture2D" uid="uid://csc65i1g5d235" path="res://assets/ui/tiles/kenney_background_elements/props/tree.png" id="5_qc6e2"]
+[ext_resource type="Texture2D" uid="uid://dm3r542x7p5m3" path="res://assets/ui/tiles/kenney_background_elements/props/bush1.png" id="6_kl1mi"]
+[ext_resource type="Texture2D" uid="uid://barf2jbnhx51f" path="res://assets/ui/tiles/kenney_background_elements/props/treeLong.png" id="7_qtik5"]
+[ext_resource type="PackedScene" uid="uid://buv72ldtgmluj" path="res://scenes/ui/arrows/arrow_up.tscn" id="8_wlng2"]
+[ext_resource type="PackedScene" uid="uid://b563jkabyb6vn" path="res://scenes/ui/arrows/arrow_right.tscn" id="9_h5kor"]
+[ext_resource type="PackedScene" uid="uid://br2cwuxy0m1x1" path="res://scenes/ui/arrows/arrow_down.tscn" id="10_pb0qr"]
+
+[node name="Location2" type="Node2D"]
+script = ExtResource("1_6s1vx")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(320, 240)
+scale = Vector2(0.625, 0.46875)
+texture = ExtResource("2_fls6r")
+metadata/_edit_lock_ = true
+
+[node name="Fences" type="Node2D" parent="."]
+position = Vector2(0, -480)
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Fence" type="Sprite2D" parent="Fences"]
+position = Vector2(-10.3284, 792.192)
+rotation = -0.158825
+scale = Vector2(0.134662, 0.56371)
+texture = ExtResource("3_nak50")
+
+[node name="Fence2" type="Sprite2D" parent="Fences"]
+position = Vector2(10.104, 788.03)
+rotation = -0.158825
+scale = Vector2(0.106986, 0.503399)
+texture = ExtResource("3_nak50")
+
+[node name="Fence3" type="Sprite2D" parent="Fences"]
+position = Vector2(27.6716, 784.192)
+rotation = -0.158825
+scale = Vector2(0.106986, 0.503399)
+texture = ExtResource("3_nak50")
+
+[node name="Fence4" type="Sprite2D" parent="Fences"]
+position = Vector2(44.481, 778.215)
+rotation = -0.158825
+scale = Vector2(0.100176, 0.463048)
+texture = ExtResource("3_nak50")
+
+[node name="Fence5" type="Sprite2D" parent="Fences"]
+position = Vector2(59.6121, 773.941)
+rotation = -0.158825
+scale = Vector2(0.093509, 0.432202)
+texture = ExtResource("3_nak50")
+
+[node name="Fence6" type="Sprite2D" parent="Fences"]
+position = Vector2(74.6716, 772.192)
+rotation = -0.158825
+scale = Vector2(0.093509, 0.432202)
+texture = ExtResource("3_nak50")
+
+[node name="Fence7" type="Sprite2D" parent="Fences"]
+position = Vector2(88.4824, 768.003)
+rotation = -0.158825
+scale = Vector2(0.0839809, 0.414623)
+texture = ExtResource("3_nak50")
+
+[node name="Fence8" type="Sprite2D" parent="Fences"]
+position = Vector2(98.2526, 762.07)
+rotation = -0.158825
+scale = Vector2(0.0561333, 0.367873)
+texture = ExtResource("3_nak50")
+
+[node name="Tilemaps" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="DistantScenarioLayer" type="TileMapLayer" parent="Tilemaps"]
+scale = Vector2(0.4, 0.4)
+tile_map_data = PackedByteArray("AAAMAAcAxwABAAMAAAANAAcAxwABAAMAAAANAAgAxwABAAQAAAANAAkAxwAEAAAAAAANAAoAxwAJAAEAAAAOAAcAxwABAAMAAAAOAAgAxwABAAQAAAAOAAkAxwAJAAQAAAAPAAQAxwAAAAMAAAAPAAcAxwABAAMAAAAPAAgAxwABAAQAAAAPAAkAxwAEAAAAAAAPAAoAxwAEAAEAAAAQAAQAxwABAAMAAAAQAAUAxwABAAQAAAAQAAYAxwADAAEAAAAQAAcAxwADAAAAAAAQAAgAxwADAAEAAAAQAAkAxwAEAAAAAAAQAAoAxwAJAAEAAAARAAQAxwABAAMAAAARAAUAxwABAAQAAAARAAYAxwAEAAEAAAARAAcAxwAEAAAAAAARAAgAxwAJAAEAAAARAAkAxwAJAAQAAAARAAoAxwAEAAEAAAASAAQAxwABAAMAAAASAAUAxwABAAQAAAASAAYAxwAFAAEAAAASAAcAxwAFAAAAAAASAAgAxwAFAAEAAAASAAkAxwAFAAAAAAASAAoAxwAFAAEAAAATAAQAxwACAAMAAAAMAAgAxwABAAQAAAANAAsAxwAEAAIAAAAOAAsAxwAEAAIAAAAPAAUAxwAAAAQAAAAPAAsAxwAEAAIAAAAQAAsAxwAEAAIAAAARAAsAxwAEAAIAAAASAAsAxwAFAAIAAAATAAUAxwACAAQAAAAMAAkAxwADAAAAAAAMAAoAxwADAAEAAAAMAAsAxwADAAIAAAALAAcAxwAAAAMAAAALAAgAxwAAAAQAAAAOAAoAxwAEAAEAAAA=")
+tile_set = ExtResource("4_ay6ib")
+metadata/_edit_lock_ = true
+
+[node name="DistantPropsLayer" type="TileMapLayer" parent="Tilemaps"]
+scale = Vector2(0.4, 0.4)
+tile_map_data = PackedByteArray("AAANAAoAxwANAAYAAAANAAkAxwANAAQAAAARAAoAxwANAAAAAAARAAsAxwANAAEAAAARAAcAxwAGAAYAAAARAAMAxwAHAAYAAAAPAAoAxwANAAYAAAAPAAkAxwANAAQAAAA=")
+tile_set = ExtResource("4_ay6ib")
+metadata/_edit_lock_ = true
+
+[node name="NearbyScenarioLayer" type="TileMapLayer" parent="Tilemaps"]
+tile_map_data = PackedByteArray("AAD//wUAxwAAAAMAAAAAAAUAxwABAAMAAAAAAAYAxwABAAQAAAABAAUAxwABAAMAAAABAAYAxwABAAQAAAACAAUAxwABAAMAAAACAAYAxwABAAQAAAADAAUAxwABAAMAAAADAAYAxwABAAQAAAAEAAUAxwACAAMAAAD//wYAxwAAAAQAAAAEAAYAxwACAAQAAAA=")
+tile_set = ExtResource("4_ay6ib")
+metadata/_edit_lock_ = true
+
+[node name="NearbyPropsLayer" type="TileMapLayer" parent="Tilemaps"]
+tile_set = ExtResource("4_ay6ib")
+metadata/_edit_lock_ = true
+
+[node name="Props" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="Tree" type="Sprite2D" parent="Props"]
+modulate = Color(0.541176, 1, 0.717647, 1)
+position = Vector2(195, 257)
+scale = Vector2(0.349069, 0.276961)
+texture = ExtResource("5_qc6e2")
+
+[node name="Bush1" type="Sprite2D" parent="Props"]
+position = Vector2(340, 324)
+scale = Vector2(0.245833, 0.329167)
+texture = ExtResource("6_kl1mi")
+
+[node name="TreeLong" type="Sprite2D" parent="Props"]
+position = Vector2(599, 204)
+scale = Vector2(0.41411, 0.5)
+texture = ExtResource("7_qtik5")
+
+[node name="Arrows" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="ArrowUp" parent="Arrows" instance=ExtResource("8_wlng2")]
+position = Vector2(315, 318)
+location_number = 4
+
+[node name="ArrowRight" parent="Arrows" instance=ExtResource("9_h5kor")]
+location_number = 3
+
+[node name="ArrowDown" parent="Arrows" instance=ExtResource("10_pb0qr")]
+position = Vector2(383, 450)
+
+[connection signal="pressed" from="Arrows/ArrowUp" to="." method="_on_arrow_pressed"]
+[connection signal="pressed" from="Arrows/ArrowRight" to="." method="_on_arrow_pressed"]
+[connection signal="pressed" from="Arrows/ArrowDown" to="." method="_on_arrow_pressed"]

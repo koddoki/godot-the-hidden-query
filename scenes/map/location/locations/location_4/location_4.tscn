@@ -1,0 +1,62 @@
+[gd_scene load_steps=9 format=4 uid="uid://cnwyov71pjmiu"]
+
+[ext_resource type="Script" path="res://scenes/map/location/locations/location_4/location_4.gd" id="1_8mhqy"]
+[ext_resource type="Texture2D" uid="uid://bcejxitnw5qf7" path="res://assets/ui/tiles/kenney_background_elements/backgrounds/backgroundColorGrass.png" id="2_1mhto"]
+[ext_resource type="TileSet" uid="uid://48rxcclb0x4y" path="res://assets/tileset/platformer_building_art.tres" id="3_km6tu"]
+[ext_resource type="Texture2D" uid="uid://dm3r542x7p5m3" path="res://assets/ui/tiles/kenney_background_elements/props/bush1.png" id="4_eld07"]
+[ext_resource type="Texture2D" uid="uid://barf2jbnhx51f" path="res://assets/ui/tiles/kenney_background_elements/props/treeLong.png" id="5_xh6fh"]
+[ext_resource type="Texture2D" uid="uid://csc65i1g5d235" path="res://assets/ui/tiles/kenney_background_elements/props/tree.png" id="6_74uxs"]
+[ext_resource type="PackedScene" uid="uid://buv72ldtgmluj" path="res://scenes/ui/arrows/arrow_up.tscn" id="7_x2kss"]
+[ext_resource type="PackedScene" uid="uid://br2cwuxy0m1x1" path="res://scenes/ui/arrows/arrow_down.tscn" id="8_feoei"]
+
+[node name="Location4" type="Node2D"]
+script = ExtResource("1_8mhqy")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(320, 240)
+scale = Vector2(0.625, 0.46875)
+texture = ExtResource("2_1mhto")
+metadata/_edit_lock_ = true
+
+[node name="Tilemaps" type="Node2D" parent="."]
+
+[node name="NearbyScenarioLayer" type="TileMapLayer" parent="Tilemaps"]
+scale = Vector2(0.7, 0.7)
+tile_map_data = PackedByteArray("AAADAAQAxwAAAAMAAAADAAUAxwAAAAQAAAAEAAQAxwABAAMAAAAEAAUAxwABAAQAAAAEAAYAxwADAAEAAAAEAAcAxwADAAAAAAAEAAgAxwADAAIAAAAFAAQAxwABAAMAAAAFAAUAxwABAAQAAAAFAAYAxwAEAAEAAAAFAAcAxwAEAAEAAAAFAAgAxwAEAAIAAAAGAAQAxwABAAMAAAAGAAUAxwABAAQAAAAGAAYAxwAEAAEAAAAGAAcAxwAJAAQAAAAGAAgAxwAEAAIAAAAHAAEAxwAAAAMAAAAHAAIAxwAAAAQAAAAHAAQAxwABAAMAAAAHAAUAxwABAAQAAAAHAAYAxwAEAAEAAAAHAAcAxwAEAAEAAAAHAAgAxwAEAAIAAAAIAAEAxwABAAMAAAAIAAIAxwABAAQAAAAIAAMAxwADAAEAAAAIAAQAxwADAAAAAAAIAAUAxwADAAAAAAAIAAYAxwAEAAAAAAAIAAcAxwAEAAAAAAAIAAgAxwAEAAIAAAAJAAEAxwABAAMAAAAJAAIAxwABAAQAAAAJAAMAxwAEAAEAAAAJAAQAxwAEAAAAAAAJAAUAxwAJAAEAAAAJAAYAxwAJAAQAAAAJAAcAxwAEAAAAAAAJAAgAxwAEAAIAAAAKAAEAxwABAAMAAAAKAAIAxwABAAQAAAAKAAMAxwAFAAEAAAAKAAQAxwAFAAAAAAAKAAUAxwAFAAAAAAAKAAYAxwAFAAAAAAAKAAcAxwAFAAAAAAAKAAgAxwAFAAIAAAALAAEAxwACAAMAAAALAAIAxwACAAQAAAA=")
+tile_set = ExtResource("3_km6tu")
+
+[node name="NearbyPropsLayer" type="TileMapLayer" parent="Tilemaps"]
+scale = Vector2(0.7, 0.7)
+tile_map_data = PackedByteArray("AAAFAAYAxwANAAQAAAAFAAcAxwANAAYAAAAHAAYAxwANAAQAAAAHAAcAxwANAAYAAAAJAAAAxwAHAAYAAAAJAAQAxwAGAAYAAAAJAAcAxwANAAAAAAAJAAgAxwANAAEAAAA=")
+tile_set = ExtResource("3_km6tu")
+
+[node name="Props" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="Bush1" type="Sprite2D" parent="Props"]
+position = Vector2(189, 411)
+scale = Vector2(0.492, 0.658)
+texture = ExtResource("4_eld07")
+
+[node name="TreeLong" type="Sprite2D" parent="Props"]
+position = Vector2(599, 204)
+scale = Vector2(0.41411, 0.5)
+texture = ExtResource("5_xh6fh")
+
+[node name="Tree" type="Sprite2D" parent="Props"]
+modulate = Color(0.541176, 1, 0.717647, 1)
+position = Vector2(108, 208)
+scale = Vector2(0.698, 0.554)
+texture = ExtResource("6_74uxs")
+
+[node name="Arrows" type="Node2D" parent="."]
+
+[node name="ArrowUp" parent="Arrows" instance=ExtResource("7_x2kss")]
+position = Vector2(465, 445)
+
+[node name="ArrowDown" parent="Arrows" instance=ExtResource("8_feoei")]
+position = Vector2(114, 438)
+location_number = 2
+
+[connection signal="pressed" from="Arrows/ArrowUp" to="." method="_on_arrow_pressed"]
+[connection signal="pressed" from="Arrows/ArrowDown" to="." method="_on_arrow_pressed"]

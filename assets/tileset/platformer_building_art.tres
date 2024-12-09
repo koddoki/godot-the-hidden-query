@@ -5,6 +5,7 @@
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hgt7d"]
 texture = ExtResource("1_b3k5n")
 texture_region_size = Vector2i(70, 70)
+use_texture_padding = false
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0

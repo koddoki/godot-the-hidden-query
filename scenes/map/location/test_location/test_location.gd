@@ -1,7 +1,7 @@
-extends Location
+extends Node2D
 
 @onready var animation := $AnimationPlayer
-
+signal change_location(next_location_name : String)
 
 func _on_arrow_east_pressed() -> void:
 	change_location.emit("TestLocationEast")

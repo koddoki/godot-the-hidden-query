@@ -101,5 +101,5 @@ func _on_query_previewer_delete_button_pressed() -> void:
 	queue_free()
 
 
-func _on_query_result_answer(result : Array[Dictionary]) -> void:
-	answer.emit(result)
+func _on_query_result_answer(result_dict : Array[Dictionary]) -> void:
+	answer.emit(result_dict)

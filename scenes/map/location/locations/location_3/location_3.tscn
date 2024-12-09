@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=4 uid="uid://cy05j7ox4js63"]
+
+[ext_resource type="Script" path="res://scenes/map/location/locations/location_3/location_3.gd" id="1_cy8p8"]
+[ext_resource type="Texture2D" uid="uid://bcejxitnw5qf7" path="res://assets/ui/tiles/kenney_background_elements/backgrounds/backgroundColorGrass.png" id="2_1mhto"]
+[ext_resource type="TileSet" uid="uid://48rxcclb0x4y" path="res://assets/tileset/platformer_building_art.tres" id="3_km6tu"]
+[ext_resource type="PackedScene" uid="uid://bflmxvkhb7f7j" path="res://scenes/ui/arrows/arrow_left.tscn" id="5_qa4b3"]
+[ext_resource type="Texture2D" uid="uid://barf2jbnhx51f" path="res://assets/ui/tiles/kenney_background_elements/props/treeLong.png" id="5_xh6fh"]
+
+[node name="Location3" type="Node2D"]
+script = ExtResource("1_cy8p8")
+metadata/_edit_lock_ = true
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(320, 240)
+scale = Vector2(0.625, 0.46875)
+texture = ExtResource("2_1mhto")
+metadata/_edit_lock_ = true
+
+[node name="Tilemaps" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="NearbyScenarioLayer" type="TileMapLayer" parent="Tilemaps"]
+tile_map_data = PackedByteArray("AAAFAAQAxwAGAAEAAAAFAAUAxwAGAAIAAAAGAAQAxwAHAAEAAAAGAAUAxwAHAAIAAAAHAAQAxwAHAAEAAAAHAAUAxwAHAAIAAAAEAAIAxwAGAAMAAAAEAAMAxwAGAAQAAAAFAAIAxwAHAAMAAAAFAAMAxwAHAAQAAAAHAAIAxwAHAAMAAAAHAAMAxwAHAAQAAAAIAAIAxwAHAAMAAAAIAAMAxwAHAAQAAAAGAAIAxwAHAAMAAAAGAAMAxwAHAAQAAAAIAAQAxwAIAAEAAAAIAAUAxwAIAAIAAAAJAAIAxwAIAAMAAAAJAAMAxwAIAAQAAAA=")
+tile_set = ExtResource("3_km6tu")
+metadata/_edit_lock_ = true
+
+[node name="NearbyPropsLayer" type="TileMapLayer" parent="Tilemaps"]
+tile_map_data = PackedByteArray("AAAGAAUAxwANAAEAAAAGAAQAxwANAAAAAAAHAAQAxwALAAIAAAAIAAEAxwAAAAYAAAA=")
+tile_set = ExtResource("3_km6tu")
+metadata/_edit_lock_ = true
+
+[node name="Props" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="TreeLong" type="Sprite2D" parent="Props"]
+position = Vector2(87, 213)
+scale = Vector2(0.599693, 0.724075)
+texture = ExtResource("5_xh6fh")
+
+[node name="Arrows" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="ArrowLeft" parent="Arrows" instance=ExtResource("5_qa4b3")]
+position = Vector2(79, 363)
+location_number = 2
+
+[connection signal="pressed" from="Arrows/ArrowLeft" to="." method="_on_arrow_pressed"]
