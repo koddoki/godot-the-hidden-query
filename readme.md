@@ -1,5 +1,11 @@
 # The Hidden Querry, um jogo Educativo com foco em ensinar SQL
 
+## Para desenvolvedores
+
+Este projeto foi desenvolvido utilizando a Godot Engine 4.3. Se você deseja executar o projeto ou contribuir no desenvolvimento de novas funcionalidades, basta baixar a versão correta da engine e abrir o projeto na Godot.
+
+A Godot Engine pode ser baixada diretamente do site oficial: https://godotengine.org/
+
 ## Motivação
 
 O mercado de jogos de puzzle, embora comumente tido como nichado, apresenta um grande potencial. Jogos independentes como Snakebird (Noumenon Games, 2015), Hue (Fiddlesticks Games, 2016) e Cosmic Express (Draknek, 2017) demonstraram esse potencial, acumulando faturamentos superiores a cem mil dólares desde seus respectivos lançamentos. Um elemento comum entre esses jogos é a combinação de desafios intelectuais com uma experiência altamente interativa e responsiva às ações do jogador, criando uma conexão envolvente e imersiva.
