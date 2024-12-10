@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://mevl074yrg3p"]
+[gd_scene load_steps=7 format=3 uid="uid://mevl074yrg3p"]
 
 [ext_resource type="Script" path="res://utils/query/queries.gd" id="1_yhetf"]
 [ext_resource type="Script" path="res://utils/query/queries_container.gd" id="2_66u3f"]
+[ext_resource type="Texture2D" uid="uid://twlmir5e8dhd" path="res://assets/ui/icons/white/question.png" id="2_i2iyx"]
 [ext_resource type="Script" path="res://utils/query/sql.gd" id="3_gxig1"]
+[ext_resource type="PackedScene" uid="uid://bpanxhjpujvdm" path="res://utils/query/query.tscn" id="3_qblye"]
+[ext_resource type="PackedScene" uid="uid://bixsneybrdam" path="res://scenes/ui/answer_hint/answer_hint.tscn" id="6_ykiga"]
 
 [node name="Queries" type="VBoxContainer"]
 offset_right = 648.0
@@ -25,6 +28,20 @@ offset_right = 632.0
 offset_bottom = 56.0
 text = "ADD"
 
+[node name="HintButton" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 80.0
+offset_bottom = 56.0
+metadata/_edit_group_ = true
+
+[node name="Question" type="Sprite2D" parent="ColorRect/HintButton"]
+modulate = Color(0.703808, 0.703808, 0.703808, 1)
+position = Vector2(32, 24)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_i2iyx")
+
 [node name="Scroll" type="ScrollContainer" parent="."]
 custom_minimum_size = Vector2(330, 420)
 layout_mode = 2
@@ -38,9 +55,20 @@ theme_override_constants/separation = 0
 script = ExtResource("2_66u3f")
 metadata/_edit_lock_ = true
 
+[node name="Query" parent="Scroll/QueriesContainer" instance=ExtResource("3_qblye")]
+layout_mode = 2
+
 [node name="SQL" type="Node" parent="."]
 script = ExtResource("3_gxig1")
 
+[node name="AnswerHint" parent="." instance=ExtResource("6_ykiga")]
+visible = false
+position = Vector2(128, 64)
+scale = Vector2(0.6, 0.6)
+
 [connection signal="pressed" from="ColorRect/AddButton" to="." method="_on_add_button_pressed"]
+[connection signal="pressed" from="ColorRect/HintButton" to="." method="_on_hint_button_pressed"]
 [connection signal="answer" from="Scroll/QueriesContainer" to="." method="_on_queries_container_answer"]
 [connection signal="execute_query" from="Scroll/QueriesContainer" to="." method="_on_queries_container_execute_query"]
+[connection signal="answer" from="Scroll/QueriesContainer/Query" to="Scroll/QueriesContainer" method="emit_answer"]
+[connection signal="execute_query" from="Scroll/QueriesContainer/Query" to="Scroll/QueriesContainer" method="emit_execute_query"]

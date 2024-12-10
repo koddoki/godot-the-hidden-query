@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://ls2y2vqxushv"]
+[gd_scene load_steps=3 format=3 uid="uid://ls2y2vqxushv"]
 
 [ext_resource type="Script" path="res://utils/query/PreviewRect/preview_rect.gd" id="1_iq3he"]
+[ext_resource type="FontFile" uid="uid://cb0ghp4306be5" path="res://assets/fonts/Kenney Pixel.ttf" id="2_f8b56"]
 
 [node name="PreviewRect" type="ColorRect"]
 custom_minimum_size = Vector2(640, 60)
@@ -23,17 +24,22 @@ offset_left = 16.0
 offset_top = 8.0
 offset_right = 520.0
 offset_bottom = 56.0
-text = "Select * from..."
+theme_override_fonts/font = ExtResource("2_f8b56")
+theme_override_font_sizes/font_size = 32
+text = "click me"
 horizontal_alignment = 1
 vertical_alignment = 1
 text_overrun_behavior = 1
 
 [node name="DeleteButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 568.0
+offset_left = 544.0
 offset_top = 8.0
-offset_right = 632.0
-offset_bottom = 56.0
+offset_right = 888.0
+offset_bottom = 200.0
+scale = Vector2(0.25, 0.25)
+theme_override_fonts/font = ExtResource("2_f8b56")
+theme_override_font_sizes/font_size = 128
 text = "Delete"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

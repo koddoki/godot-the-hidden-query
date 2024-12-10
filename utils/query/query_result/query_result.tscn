@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cpj83madm873g"]
+[gd_scene load_steps=3 format=3 uid="uid://cpj83madm873g"]
 
 [ext_resource type="Script" path="res://utils/query/query_result/query_result.gd" id="1_6hwf0"]
+[ext_resource type="FontFile" uid="uid://cb0ghp4306be5" path="res://assets/fonts/Kenney Pixel.ttf" id="2_wq8bx"]
 
 [node name="QueryResult" type="ColorRect"]
 custom_minimum_size = Vector2(640, 340)
@@ -15,17 +16,15 @@ offset_right = 640.0
 offset_bottom = 344.0
 horizontal_scroll_mode = 0
 
-[node name="Label" type="Label" parent="ScrollContainer"]
+[node name="Label" type="RichTextLabel" parent="ScrollContainer"]
+clip_contents = false
 layout_mode = 2
 size_flags_horizontal = 3
-text = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-clip_text = true
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("2_wq8bx")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "aaaaa"
 
 [node name="Answer" type="Button" parent="."]
 layout_mode = 0

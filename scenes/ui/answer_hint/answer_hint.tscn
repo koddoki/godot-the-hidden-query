@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://bixsneybrdam"]
+
+[ext_resource type="Script" path="res://scenes/ui/answer_hint/answer_hint.gd" id="1_j5j5w"]
+[ext_resource type="Texture2D" uid="uid://b3nl82e2ymc8n" path="res://assets/ui/tiles/kenney_pixel_adventure/tile_0026.png" id="2_gmhbf"]
+[ext_resource type="FontFile" uid="uid://cb0ghp4306be5" path="res://assets/fonts/Kenney Pixel.ttf" id="3_p5o0c"]
+[ext_resource type="FontFile" uid="uid://dx0leo3qtvu16" path="res://assets/fonts/Kenney Mini.ttf" id="4_14b2i"]
+
+[node name="AnswerHint" type="Node2D"]
+script = ExtResource("1_j5j5w")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 640.0
+offset_bottom = 480.0
+
+[node name="Tile0026" type="Sprite2D" parent="."]
+position = Vector2(320, 244)
+scale = Vector2(20, 15.25)
+texture = ExtResource("2_gmhbf")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 96.0
+offset_top = 88.0
+offset_right = 544.0
+offset_bottom = 320.0
+theme_override_colors/font_color = Color(0.212305, 0.212305, 0.212305, 1)
+theme_override_fonts/font = ExtResource("3_p5o0c")
+theme_override_font_sizes/font_size = 40
+text = "Hint Text!"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="."]
+offset_left = 232.0
+offset_top = 336.0
+offset_right = 408.0
+offset_bottom = 416.0
+theme_override_fonts/font = ExtResource("4_14b2i")
+theme_override_font_sizes/font_size = 32
+text = "Continue"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

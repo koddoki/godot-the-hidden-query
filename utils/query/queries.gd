@@ -4,10 +4,15 @@ extends VBoxContainer
 
 @onready var queries_container := $Scroll/QueriesContainer
 @onready var sql := $SQL
+@onready var answer_hint := $AnswerHint
 var current_ongoing_query : Query
 
 signal answer(data : Array[Dictionary])
 signal reset
+
+
+func update_answer_hint_text(new_text : String):
+	answer_hint.update_text(new_text)
 
 
 func _ready() -> void:
@@ -29,3 +34,7 @@ func _on_queries_container_execute_query(query_string: String, query_node : Quer
 	var batata = sql.execute_query(query_string)
 	query_node.result.update_result(batata)
 	
+
+
+func _on_hint_button_pressed() -> void:
+	answer_hint.visible = true

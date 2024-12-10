@@ -36,9 +36,9 @@ func update_colors():
 
 
 func generate_random_color() -> Color:
-	var r = rng.randf_range(0, 0.7)
-	var g = rng.randf_range(0, 0.7)
-	var b = rng.randf_range(0, 0.7)
+	var r = rng.randf_range(0, 0.5)
+	var g = rng.randf_range(0, 0.5)
+	var b = rng.randf_range(0, 0.5)
 
 	return Color(r,g,b)
 
@@ -90,6 +90,7 @@ func _on_query_viewer_reset_button_pressed() -> void:
 
 
 func _on_query_viewer_hide_button_pressed() -> void:
+	previewer.label.text = viewer.text_edit.text.left(20) + "..."
 	if result.visible == true:
 		animation_close_result_and_viewer()
 		return
