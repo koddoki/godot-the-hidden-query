@@ -9,11 +9,12 @@ color = Color(0.326239, 0.692828, 0.704747, 1)
 script = ExtResource("1_6hwf0")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
-custom_minimum_size = Vector2(640, 340)
+custom_minimum_size = Vector2(600, 300)
 layout_mode = 2
-offset_top = 4.0
-offset_right = 640.0
-offset_bottom = 344.0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 624.0
+offset_bottom = 316.0
 horizontal_scroll_mode = 0
 
 [node name="Label" type="RichTextLabel" parent="ScrollContainer"]
@@ -24,7 +25,6 @@ size_flags_vertical = 3
 theme_override_fonts/normal_font = ExtResource("2_wq8bx")
 theme_override_font_sizes/normal_font_size = 32
 bbcode_enabled = true
-text = "aaaaa"
 
 [node name="Answer" type="Button" parent="."]
 layout_mode = 0
@@ -32,6 +32,8 @@ offset_left = 256.0
 offset_top = 272.0
 offset_right = 384.0
 offset_bottom = 320.0
+theme_override_fonts/font = ExtResource("2_wq8bx")
+theme_override_font_sizes/font_size = 32
 text = "Responder"
 
 [connection signal="pressed" from="Answer" to="." method="_on_answer_pressed"]
