@@ -358,12 +358,12 @@ scale = Vector2(0.1, 0.1)
 texture = ExtResource("4_3kqgm")
 
 [node name="Garry" type="Sprite2D" parent="Simulation/People"]
-position = Vector2(57, 29)
+position = Vector2(400, 208)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("4_00583")
 
 [node name="Henry" type="Sprite2D" parent="Simulation/People"]
-position = Vector2(88, 31)
+position = Vector2(88, 376)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("6_8shx8")
 
@@ -373,22 +373,22 @@ scale = Vector2(0.1, 0.1)
 texture = ExtResource("7_jxrby")
 
 [node name="Perry" type="Sprite2D" parent="Simulation/People"]
-position = Vector2(148, 31)
+position = Vector2(112, 240)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("8_lxa25")
 
 [node name="Percy" type="Sprite2D" parent="Simulation/People"]
-position = Vector2(181, 32)
+position = Vector2(248, 400)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("9_m6kow")
 
 [node name="Paul" type="Sprite2D" parent="Simulation/People"]
-position = Vector2(210, 34)
+position = Vector2(40, 392)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("10_niue3")
 
 [node name="Peter" type="Sprite2D" parent="Simulation/People"]
-position = Vector2(241, 33)
+position = Vector2(56, 304)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("11_2qlk3")
 
@@ -398,47 +398,47 @@ scale = Vector2(0.1, 0.1)
 texture = ExtResource("12_k8t5s")
 
 [node name="Ella" type="Sprite2D" parent="Simulation/People"]
-position = Vector2(23.4, 65.1)
+position = Vector2(360, 448)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("13_upodj")
 
 [node name="Gemma" type="Sprite2D" parent="Simulation/People"]
-position = Vector2(56.4, 64.1)
+position = Vector2(336, 400)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("14_j7vqj")
 
 [node name="Holly" type="Sprite2D" parent="Simulation/People"]
-position = Vector2(87.4, 66.1)
+position = Vector2(56, 200)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("15_344rq")
 
 [node name="Maya" type="Sprite2D" parent="Simulation/People"]
-position = Vector2(118.4, 65.1)
+position = Vector2(608, 344)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("16_n651j")
 
 [node name="Penny" type="Sprite2D" parent="Simulation/People"]
-position = Vector2(147.4, 66.1)
+position = Vector2(96, 328)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("17_wikly")
 
 [node name="Penna" type="Sprite2D" parent="Simulation/People"]
-position = Vector2(180.4, 67.1)
+position = Vector2(576, 384)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("18_23l1e")
 
 [node name="Polly" type="Sprite2D" parent="Simulation/People"]
-position = Vector2(209.4, 69.1)
+position = Vector2(496, 232)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("19_nkb1i")
 
 [node name="Pippa" type="Sprite2D" parent="Simulation/People"]
-position = Vector2(240.4, 68.1)
+position = Vector2(400, 264)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("20_w43xw")
 
 [node name="Sasha" type="Sprite2D" parent="Simulation/People"]
-position = Vector2(268.4, 66.1)
+position = Vector2(592, 64)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("21_0d5qa")
 

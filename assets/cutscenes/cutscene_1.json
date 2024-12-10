@@ -4,7 +4,7 @@
 		"text": "But you should know, your first challenge already begun! Why don't you try querying the townsfolk table?",
 		"character_data": [
 			{
-				"character_texture": "res://townsfolk1_icon.svg",
+				"character_texture": "res://assets/ui/tiles/kenney_animal_pack/Round (outline)/hippo.png",
 				"row": 4,
 				"column": 3,
 				"is_flipped": false
@@ -16,7 +16,7 @@
 		"text": "Oh, you are on your journey to SQLand? Great! Learning SQL is really useful!",
 		"character_data": [
 			{
-				"character_texture": "res://sarah_icon.svg",
+				"character_texture": "res://assets/ui/tiles/kenney_animal_pack/Round (outline)/hippo.png",
 				"row": 2,
 				"column": 2,
 				"is_flipped": false
@@ -28,7 +28,7 @@
 		"text": "I only need to find my guide, they should be somewhere nearby. Maybe one of the townspeople would know who they are!",
 		"character_data": [
 			{
-				"character_texture": "res://sarah_icon.svg",
+				"character_texture": "res://assets/ui/tiles/kenney_animal_pack/Round (outline)/rabbit.png",
 				"row": 2,
 				"column": 2,
 				"is_flipped": false
@@ -40,7 +40,7 @@
 		"text": "Alright, it's time to start my journey in SQLand, the place where anyone can learn SQL!",
 		"character_data": [
 			{
-				"character_texture": "res://sarah_icon.svg",
+				"character_texture": "res://assets/ui/tiles/kenney_animal_pack/Round (outline)/rabbit.png",
 				"row": 2,
 				"column": 2,
 				"is_flipped": false
