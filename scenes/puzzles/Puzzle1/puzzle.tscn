@@ -1,15 +1,320 @@
-[gd_scene load_steps=6 format=4 uid="uid://md333pglidxr"]
+[gd_scene load_steps=35 format=4 uid="uid://md333pglidxr"]
 
 [ext_resource type="PackedScene" uid="uid://mevl074yrg3p" path="res://utils/query/queries.tscn" id="1_qwt6t"]
 [ext_resource type="Script" path="res://scenes/puzzles/Puzzle1/puzzle1.gd" id="1_v54co"]
 [ext_resource type="TileSet" uid="uid://g24mc763mfio" path="res://assets/tileset/urban_pack_teleset.tres" id="2_0l8sf"]
 [ext_resource type="Script" path="res://scenes/puzzles/Puzzle1/simulation.gd" id="2_o78na"]
-[ext_resource type="Texture2D" uid="uid://dc1a4rcqaeoqi" path="res://assets/tileset/urban_pack_tilemap.png" id="2_uprqi"]
+[ext_resource type="Texture2D" uid="uid://dph6iovic5te4" path="res://assets/ui/tiles/kenney_animal_pack/Round/elephant.png" id="4_3kqgm"]
+[ext_resource type="Texture2D" uid="uid://3g286yqk1cv2" path="res://assets/ui/tiles/kenney_animal_pack/Round/giraffe.png" id="4_00583"]
+[ext_resource type="Texture2D" uid="uid://ch4n0chcu4yhj" path="res://assets/ui/tiles/kenney_animal_pack/Round/hippo.png" id="6_8shx8"]
+[ext_resource type="Texture2D" uid="uid://smp8wpc05tb4" path="res://assets/ui/tiles/kenney_animal_pack/Round/monkey.png" id="7_jxrby"]
+[ext_resource type="Texture2D" uid="uid://cmlxjuj5bmm4e" path="res://assets/ui/tiles/kenney_animal_pack/Round/panda.png" id="8_lxa25"]
+[ext_resource type="Texture2D" uid="uid://dxiqawppt6xb8" path="res://assets/ui/tiles/kenney_animal_pack/Round/parrot.png" id="9_m6kow"]
+[ext_resource type="Texture2D" uid="uid://b5cunigpjmi5q" path="res://assets/ui/tiles/kenney_animal_pack/Round/penguin.png" id="10_niue3"]
+[ext_resource type="Texture2D" uid="uid://csbojfyw2khm7" path="res://assets/ui/tiles/kenney_animal_pack/Round/pig.png" id="11_2qlk3"]
+[ext_resource type="Texture2D" uid="uid://c2wtpyf8p7b28" path="res://assets/ui/tiles/kenney_animal_pack/Round/snake.png" id="12_k8t5s"]
+[ext_resource type="Texture2D" uid="uid://br6fuif06mku1" path="res://assets/ui/tiles/kenney_animal_pack/Round without details/elephant.png" id="13_upodj"]
+[ext_resource type="Texture2D" uid="uid://cxtq8yr6o5lxu" path="res://assets/ui/tiles/kenney_animal_pack/Round without details/giraffe.png" id="14_j7vqj"]
+[ext_resource type="Texture2D" uid="uid://ber1mohasc8as" path="res://assets/ui/tiles/kenney_animal_pack/Round without details/hippo.png" id="15_344rq"]
+[ext_resource type="Texture2D" uid="uid://cg6nvps5nl7sx" path="res://assets/ui/tiles/kenney_animal_pack/Round without details/monkey.png" id="16_n651j"]
+[ext_resource type="Texture2D" uid="uid://dmb6b0xjok41w" path="res://assets/ui/tiles/kenney_animal_pack/Round without details/panda.png" id="17_wikly"]
+[ext_resource type="Texture2D" uid="uid://dvjguw7eeao71" path="res://assets/ui/tiles/kenney_animal_pack/Round without details/parrot.png" id="18_23l1e"]
+[ext_resource type="Texture2D" uid="uid://bnt5lcf4ltsns" path="res://assets/ui/tiles/kenney_animal_pack/Round without details/penguin.png" id="19_nkb1i"]
+[ext_resource type="Texture2D" uid="uid://cfia8ncw6ylge" path="res://assets/ui/tiles/kenney_animal_pack/Round without details/pig.png" id="20_w43xw"]
+[ext_resource type="Texture2D" uid="uid://bvsjw4kmy7t8i" path="res://assets/ui/tiles/kenney_animal_pack/Round without details/snake.png" id="21_0d5qa"]
+[ext_resource type="Texture2D" uid="uid://b3nl82e2ymc8n" path="res://assets/ui/tiles/kenney_pixel_adventure/tile_0026.png" id="23_5kiwy"]
+[ext_resource type="Script" path="res://scenes/ui/answer_hint/answer_hint.gd" id="23_atecf"]
+[ext_resource type="FontFile" uid="uid://dx0leo3qtvu16" path="res://assets/fonts/Kenney Mini.ttf" id="23_holu3"]
+[ext_resource type="Texture2D" uid="uid://bw43wkxxts0tb" path="res://assets/ui/icons/white/checkmark.png" id="23_l4vlu"]
+[ext_resource type="Script" path="res://scenes/ui/answer_animation/answer_animation.gd" id="23_xw2qn"]
+[ext_resource type="FontFile" uid="uid://cb0ghp4306be5" path="res://assets/fonts/Kenney Pixel.ttf" id="24_af4a5"]
+[ext_resource type="Texture2D" uid="uid://lrfylv7h1hm" path="res://assets/ui/icons/white/cross.png" id="24_o7ybw"]
+[ext_resource type="Texture2D" uid="uid://w3id45hgypk8" path="res://assets/ui/icons/white/star.png" id="27_klci0"]
+
+[sub_resource type="Animation" id="Animation_p04qr"]
+resource_name = "correct_answer"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.172549, 0.168627, 0.32549, 0), Color(0.171102, 0.16935, 0.325803, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Star:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Star:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1, 1.5, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(3, 3), Vector2(2, 2), Vector2(25, 25)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Star:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(2.5, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 0.672884, 0.127881, 1), Color(1, 0.67451, 0.129412, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Checkmark:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 2.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Button:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_1qxr4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.171102, 0.16935, 0.325803, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Star:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Star:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4, 4)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Star:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.672884, 0.127881, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Checkmark:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Button:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Cross:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_nh0au"]
+resource_name = "wrong_answer"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.172549, 0.168627, 0.32549, 0), Color(0.171102, 0.16935, 0.325803, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Star:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Star:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1, 1.5, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(3, 3), Vector2(2, 2), Vector2(25, 25)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Star:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(2.5, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 0.672884, 0.127881, 1), Color(1, 0.67451, 0.129412, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Button:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Cross:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 2.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tsjem"]
+_data = {
+"RESET": SubResource("Animation_1qxr4"),
+"correct_answer": SubResource("Animation_p04qr"),
+"wrong_answer": SubResource("Animation_nh0au")
+}
 
 [node name="Puzzle1" type="Node2D"]
 script = ExtResource("1_v54co")
-
-[node name="Ui" type="CanvasLayer" parent="."]
 
 [node name="BackgroundRect" type="ColorRect" parent="."]
 offset_right = 640.0
@@ -49,52 +354,94 @@ metadata/_edit_lock_ = true
 [node name="People" type="Node2D" parent="Simulation"]
 
 [node name="Douglas" type="Sprite2D" parent="Simulation/People"]
-position = Vector2(560, 388)
-scale = Vector2(2, 2)
-texture = ExtResource("2_uprqi")
-hframes = 27
-vframes = 18
-frame = 24
+position = Vector2(24, 30)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_3kqgm")
 
-[node name="Adriana" type="Sprite2D" parent="Simulation/People"]
-position = Vector2(273, 38)
-scale = Vector2(2, 2)
-texture = ExtResource("2_uprqi")
-hframes = 27
-vframes = 18
-frame = 134
+[node name="Garry" type="Sprite2D" parent="Simulation/People"]
+position = Vector2(57, 29)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_00583")
 
-[node name="Cleber" type="Sprite2D" parent="Simulation/People"]
-position = Vector2(79, 371)
-scale = Vector2(2, 2)
-texture = ExtResource("2_uprqi")
-hframes = 27
-vframes = 18
-frame = 186
+[node name="Henry" type="Sprite2D" parent="Simulation/People"]
+position = Vector2(88, 31)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("6_8shx8")
 
-[node name="Renato" type="Sprite2D" parent="Simulation/People"]
-position = Vector2(491, 19)
-scale = Vector2(2, 2)
-texture = ExtResource("2_uprqi")
-hframes = 27
-vframes = 18
-frame = 266
+[node name="Milo" type="Sprite2D" parent="Simulation/People"]
+position = Vector2(119, 30)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("7_jxrby")
 
-[node name="Guilherme" type="Sprite2D" parent="Simulation/People"]
-position = Vector2(286, 347)
-scale = Vector2(2, 2)
-texture = ExtResource("2_uprqi")
-hframes = 27
-vframes = 18
-frame = 347
+[node name="Perry" type="Sprite2D" parent="Simulation/People"]
+position = Vector2(148, 31)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("8_lxa25")
 
-[node name="Vania" type="Sprite2D" parent="Simulation/People"]
-position = Vector2(30, 163)
-scale = Vector2(2, 2)
-texture = ExtResource("2_uprqi")
-hframes = 27
-vframes = 18
-frame = 431
+[node name="Percy" type="Sprite2D" parent="Simulation/People"]
+position = Vector2(181, 32)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_m6kow")
+
+[node name="Paul" type="Sprite2D" parent="Simulation/People"]
+position = Vector2(210, 34)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("10_niue3")
+
+[node name="Peter" type="Sprite2D" parent="Simulation/People"]
+position = Vector2(241, 33)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_2qlk3")
+
+[node name="Sven" type="Sprite2D" parent="Simulation/People"]
+position = Vector2(269, 31)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("12_k8t5s")
+
+[node name="Ella" type="Sprite2D" parent="Simulation/People"]
+position = Vector2(23.4, 65.1)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("13_upodj")
+
+[node name="Gemma" type="Sprite2D" parent="Simulation/People"]
+position = Vector2(56.4, 64.1)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("14_j7vqj")
+
+[node name="Holly" type="Sprite2D" parent="Simulation/People"]
+position = Vector2(87.4, 66.1)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("15_344rq")
+
+[node name="Maya" type="Sprite2D" parent="Simulation/People"]
+position = Vector2(118.4, 65.1)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("16_n651j")
+
+[node name="Penny" type="Sprite2D" parent="Simulation/People"]
+position = Vector2(147.4, 66.1)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("17_wikly")
+
+[node name="Penna" type="Sprite2D" parent="Simulation/People"]
+position = Vector2(180.4, 67.1)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("18_23l1e")
+
+[node name="Polly" type="Sprite2D" parent="Simulation/People"]
+position = Vector2(209.4, 69.1)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("19_nkb1i")
+
+[node name="Pippa" type="Sprite2D" parent="Simulation/People"]
+position = Vector2(240.4, 68.1)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("20_w43xw")
+
+[node name="Sasha" type="Sprite2D" parent="Simulation/People"]
+position = Vector2(268.4, 66.1)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("21_0d5qa")
 
 [node name="BottomScreen" type="Node2D" parent="."]
 
@@ -103,6 +450,89 @@ offset_top = 480.0
 offset_bottom = 960.0
 database_path = "res://scenes/puzzles/Puzzle1/data.db"
 
-[node name="Node2D" type="Node2D" parent="BottomScreen"]
+[node name="AnswerHint" type="Node2D" parent="BottomScreen"]
+visible = false
+script = ExtResource("23_atecf")
+
+[node name="ColorRect" type="ColorRect" parent="BottomScreen/AnswerHint"]
+offset_top = 480.0
+offset_right = 640.0
+offset_bottom = 960.0
+
+[node name="Tile0026" type="Sprite2D" parent="BottomScreen/AnswerHint"]
+position = Vector2(320, 724)
+scale = Vector2(20, 15.25)
+texture = ExtResource("23_5kiwy")
+
+[node name="Label" type="Label" parent="BottomScreen/AnswerHint"]
+offset_left = 96.0
+offset_top = 568.0
+offset_right = 544.0
+offset_bottom = 800.0
+theme_override_colors/font_color = Color(0.212305, 0.212305, 0.212305, 1)
+theme_override_fonts/font = ExtResource("24_af4a5")
+theme_override_font_sizes/font_size = 40
+text = "Hint Text!"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="BottomScreen/AnswerHint"]
+offset_left = 232.0
+offset_top = 816.0
+offset_right = 408.0
+offset_bottom = 896.0
+theme_override_fonts/font = ExtResource("23_holu3")
+theme_override_font_sizes/font_size = 32
+text = "Continue"
+
+[node name="AnswerAnimation" type="Node2D" parent="."]
+script = ExtResource("23_xw2qn")
+
+[node name="ColorRect" type="ColorRect" parent="AnswerAnimation"]
+visible = false
+offset_right = 640.0
+offset_bottom = 960.0
+color = Color(0.171102, 0.16935, 0.325803, 1)
+metadata/_edit_lock_ = true
+
+[node name="Button" type="Button" parent="AnswerAnimation"]
+visible = false
+offset_left = 232.0
+offset_top = 600.0
+offset_right = 408.0
+offset_bottom = 680.0
+theme_override_fonts/font = ExtResource("23_holu3")
+theme_override_font_sizes/font_size = 32
+text = "Continue"
+
+[node name="Checkmark" type="Sprite2D" parent="AnswerAnimation"]
+visible = false
+modulate = Color(1.31397e-05, 0.791293, 0.174296, 1)
+position = Vector2(320, 408)
+scale = Vector2(4, 4)
+texture = ExtResource("23_l4vlu")
+
+[node name="Cross" type="Sprite2D" parent="AnswerAnimation"]
+visible = false
+modulate = Color(0.817768, 0, 0.146844, 1)
+position = Vector2(320, 408)
+scale = Vector2(4, 4)
+texture = ExtResource("24_o7ybw")
+
+[node name="Star" type="Sprite2D" parent="AnswerAnimation"]
+visible = false
+modulate = Color(1, 0.672884, 0.127881, 1)
+position = Vector2(320, 408)
+scale = Vector2(4, 4)
+texture = ExtResource("27_klci0")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnswerAnimation"]
+libraries = {
+"": SubResource("AnimationLibrary_tsjem")
+}
 
 [connection signal="answer" from="BottomScreen/Queries" to="." method="_on_queries_answer"]
+[connection signal="pressed" from="BottomScreen/AnswerHint" to="." method="_on_answer_hint_pressed"]
+[connection signal="pressed" from="BottomScreen/AnswerHint/Button" to="BottomScreen/AnswerHint" method="_on_button_pressed"]
+[connection signal="pressed" from="AnswerAnimation" to="." method="_on_answer_animation_pressed"]
+[connection signal="pressed" from="AnswerAnimation/Button" to="AnswerAnimation" method="_on_button_pressed"]

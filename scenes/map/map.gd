@@ -6,7 +6,13 @@ extends Node2D
 @onready var positions := $UpperScreen/Positions
 @onready var locations := $BottomScreen/Locations
 @onready var bottom_fade_rect := $BottomScreen/BottomFadeRect
+@onready var cutscene_manager := $CutsceneManager
 
+
+func _ready() -> void:
+	print(Globals.level_completion[1]["is_completed"])
+	if not Globals.level_completion[1]["is_completed"]:
+		cutscene_manager.start_cutscene("res://assets/cutscenes/cutscene_1.json", 1)
 
 func _on_blink_timer_timeout() -> void:
 	var position : Sprite2D = positions.get_child(current_location)
@@ -24,3 +30,7 @@ func _on_bottom_fade_rect_fade_in_is_over() -> void:
 	locations.hide_locations()
 	locations.change_location("Location" + str(current_location))
 	bottom_fade_rect.fade_out()
+
+
+func _on_cutscene_manager_end() -> void:
+	pass # Replace with function body.

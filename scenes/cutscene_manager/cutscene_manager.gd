@@ -2,8 +2,8 @@ extends Node2D
 
 
 @onready var background_node : = $Background
-@onready var textbox_title : = $ColorRect/TextEdit
-@onready var textbox_text : = $ColorRect/TextEdit2
+@onready var textbox_title : = $ColorRect/Title
+@onready var textbox_text : = $ColorRect/Text
 @onready var characters : = $Characters
 @onready var spawn_positions : = $SpawnPositions
 
@@ -11,15 +11,40 @@ extends Node2D
 @onready var default_texture = load("res://icon.svg")
 
 var current_csv_row = 0
-
-signal next_button_pressed
-
-
-
-func update_scene(_path_csv:String):
-	pass
+var dialogues : Array
+var puzzle := 0
 
 
+func _ready():
+	start_cutscene("res://assets/cutscenes/cutscene_1.json", 1)
+
+# If you want to go back to the map, next_puzzle should be equals to 0
+func start_cutscene(cutscene_path : String, next_puzzle : int):
+	visible = true
+	puzzle = next_puzzle
+	var json_as_text = FileAccess.get_file_as_string(cutscene_path)
+	dialogues = JSON.parse_string(json_as_text)
+	next_scene()
+
+
+func next_scene():
+	if dialogues.size() > 0:
+		var dialogue = dialogues.pop_back()
+		var background = dialogue["background"] if dialogue.has("background") else null
+		var title = dialogue["title"] if dialogue.has("title") else null
+		var text = dialogue["text"] if dialogue.has("text") else null
+		var character_data = dialogue["character_data"] if dialogue.has("character_data") else null
+		update_text(title, text)
+		update_characters(character_data)
+		return
+	
+	if puzzle == 0:
+		visible = false
+		return
+	
+	SceneSwitcher.goto_scene("res://scenes/puzzles/Puzzle" + str(puzzle) +"/puzzle.tscn")
+
+## This function is not being used in this project, but if neccessary it's possible to
 func update_background(background_path : String):
 	if background_path == null:
 		return
@@ -68,4 +93,4 @@ func update_characters(characters_data):
 
 
 func _on_next_button_pressed():
-	emit_signal("next_button_pressed")
+	next_scene()

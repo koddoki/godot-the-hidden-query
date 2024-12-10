@@ -189,6 +189,7 @@ mouse_filter = 2
 metadata/_edit_lock_ = true
 
 [node name="CutsceneManager" parent="." instance=ExtResource("12_beyve")]
+visible = false
 
 [connection signal="timeout" from="UpperScreen/Positions/BlinkTimer" to="." method="_on_blink_timer_timeout"]
 [connection signal="go_to_location" from="BottomScreen/Locations/Location1" to="." method="_on_location_go_to_location"]

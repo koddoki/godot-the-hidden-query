@@ -1,0 +1,50 @@
+[
+	{
+		"title": "Stranger",
+		"text": "But you should know, your first challenge already begun! Why don't you try querying the townsfolk table?",
+		"character_data": [
+			{
+				"character_texture": "res://townsfolk1_icon.svg",
+				"row": 4,
+				"column": 3,
+				"is_flipped": false
+			}
+		]
+	},
+	{
+		"title": "Stranger",
+		"text": "Oh, you are on your journey to SQLand? Great! Learning SQL is really useful!",
+		"character_data": [
+			{
+				"character_texture": "res://sarah_icon.svg",
+				"row": 2,
+				"column": 2,
+				"is_flipped": false
+			}
+		]
+	},
+	{
+		"title": "Sarah",
+		"text": "I only need to find my guide, they should be somewhere nearby. Maybe one of the townspeople would know who they are!",
+		"character_data": [
+			{
+				"character_texture": "res://sarah_icon.svg",
+				"row": 2,
+				"column": 2,
+				"is_flipped": false
+			}
+		]
+	},
+	{
+		"title": "Sarah",
+		"text": "Alright, it's time to start my journey in SQLand, the place where anyone can learn SQL!",
+		"character_data": [
+			{
+				"character_texture": "res://sarah_icon.svg",
+				"row": 2,
+				"column": 2,
+				"is_flipped": false
+			}
+		]
+  }
+]
