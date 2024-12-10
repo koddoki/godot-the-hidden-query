@@ -5,7 +5,7 @@
 		"character_data": [
 			{
 				"character_texture": "res://assets/ui/tiles/kenney_animal_pack/Round (outline)/hippo.png",
-				"row": 4,
+				"row": 3,
 				"column": 3,
 				"is_flipped": false
 			}
@@ -17,8 +17,8 @@
 		"character_data": [
 			{
 				"character_texture": "res://assets/ui/tiles/kenney_animal_pack/Round (outline)/hippo.png",
-				"row": 2,
-				"column": 2,
+				"row": 3,
+				"column": 3,
 				"is_flipped": false
 			}
 		]

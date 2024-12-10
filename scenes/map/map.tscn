@@ -195,5 +195,6 @@ visible = false
 [connection signal="go_to_location" from="BottomScreen/Locations/Location1" to="." method="_on_location_go_to_location"]
 [connection signal="go_to_location" from="BottomScreen/Locations/Location2" to="." method="_on_location_go_to_location"]
 [connection signal="go_to_location" from="BottomScreen/Locations/Location3" to="." method="_on_location_go_to_location"]
+[connection signal="start_cutscene_3" from="BottomScreen/Locations/Location3" to="." method="_on_location_3_start_cutscene_3"]
 [connection signal="go_to_location" from="BottomScreen/Locations/Location4" to="." method="_on_location_go_to_location"]
 [connection signal="fade_in_is_over" from="BottomScreen/BottomFadeRect" to="." method="_on_bottom_fade_rect_fade_in_is_over"]

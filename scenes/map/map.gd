@@ -10,9 +10,13 @@ extends Node2D
 
 
 func _ready() -> void:
-	print(Globals.level_completion[1]["is_completed"])
 	if not Globals.level_completion[1]["is_completed"]:
 		cutscene_manager.start_cutscene("res://assets/cutscenes/cutscene_1.json", 1)
+		return
+	if not Globals.level_completion[2]["is_completed"]:
+		cutscene_manager.start_cutscene("res://assets/cutscenes/cutscene_2.json", 2)
+		return
+
 
 func _on_blink_timer_timeout() -> void:
 	var position : Sprite2D = positions.get_child(current_location)
@@ -32,5 +36,5 @@ func _on_bottom_fade_rect_fade_in_is_over() -> void:
 	bottom_fade_rect.fade_out()
 
 
-func _on_cutscene_manager_end() -> void:
-	pass # Replace with function body.
+func _on_location_3_start_cutscene_3() -> void:
+	cutscene_manager.start_cutscene("res://assets/cutscenes/cutscene_3.json", 3)

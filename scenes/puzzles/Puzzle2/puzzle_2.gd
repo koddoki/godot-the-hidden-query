@@ -7,11 +7,11 @@ extends Node2D
 @onready var queries := $BottomScreen/Queries
 
 var is_answer_correctly_answered := false
-var correct_answer := ["Douglas", "Ella", "Garry", "Gemma", "Henry", "Holly", "Milo", "Maya", "Perry", "Penny", "Percy", "Penna", "Paul", "Polly", "Peter", "Pippa", "Sven", "Sasha"]
+var correct_answer := ["Ella", "Gemma", "Holly", "Maya", "Penny", "Penna", "Polly", "Pippa", "Sasha"]
 
 func _ready() -> void:
 	prepare_database()
-	queries.update_answer_hint_text("In SQL you can search for every row in a table by querying:\n'SELECT * FROM table_name'!\n Maybe you should try something similar with the 'people' table, hum?")
+	queries.update_answer_hint_text("In SQL, you can add conditions to your query!For example:\n If you want to query everyone named 'Douglas', you could just query:\n'SELECT * FROM people WHERE name = 'Douglas'")
 
 
 func prepare_database():
@@ -222,7 +222,6 @@ func _on_queries_answer(answer_array: Array[Dictionary]) -> void:
 	
 	for row in answer_array:
 		people_name.append(row.name)
-	
 	if people_name.hash() == correct_answer.hash():
 		answer_animation.correct_answer()
 	else:
@@ -245,7 +244,7 @@ func _on_answer_animation_pressed(is_right_answer: bool) -> void:
 func _on_answer_hint_pressed() -> void:
 	print(is_answer_correctly_answered)
 	if is_answer_correctly_answered:
-		Globals.level_completion[1] = {
+		Globals.level_completion[2] = {
 			"is_completed": true,
 			"puzzle_points": 3
 		}

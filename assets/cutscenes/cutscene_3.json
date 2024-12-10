@@ -1,0 +1,38 @@
+[
+	{
+		"title": "Parrot",
+		"text": "Regarding the people database, can you tell me who is the male elephant?",
+		"character_data": [
+			{
+				"character_texture": "res://assets/ui/tiles/kenney_animal_pack/Round (outline)/parrot.png",
+				"row": 2,
+				"column": 3,
+				"is_flipped": false
+			}
+		]
+	},
+	{
+		"title": "Parrot",
+		"text": "Why don't we try solving an SQL puzzle?",
+		"character_data": [
+			{
+				"character_texture": "res://assets/ui/tiles/kenney_animal_pack/Round (outline)/parrot.png",
+				"row": 2,
+				"column": 3,
+				"is_flipped": false
+			}
+		]
+	},
+	{
+		"title": "Puzzle",
+		"text": "Welcome to SQLand!",
+		"character_data": [
+			{
+				"character_texture": "res://assets/ui/tiles/kenney_animal_pack/Round (outline)/parrot.png",
+				"row": 2,
+				"column": 3,
+				"is_flipped": false
+			}
+		]
+	}
+]

@@ -1,0 +1,26 @@
+[
+	{
+		"title": "Stranger",
+		"text": "If you find every person whose gender is female, I will guide you to SQLand!",
+		"character_data": [
+			{
+				"character_texture": "res://assets/ui/tiles/kenney_animal_pack/Round (outline)/hippo.png",
+				"row": 2,
+				"column": 3,
+				"is_flipped": false
+			}
+		]
+	},
+	{
+		"title": "Stranger",
+		"text": "Wonderful!",
+		"character_data": [
+			{
+				"character_texture": "res://assets/ui/tiles/kenney_animal_pack/Round (outline)/hippo.png",
+				"row": 2,
+				"column": 3,
+				"is_flipped": false
+			}
+		]
+	}
+]

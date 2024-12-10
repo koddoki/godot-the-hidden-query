@@ -14,7 +14,6 @@ func update_color(new_color : Color) -> void:
 
 
 func update_result(new_result : Array[Dictionary]):
-	print("Era pra atualizar o texto do result")
 	current_result = new_result
 	label.text = array_to_readable_string(current_result)
 

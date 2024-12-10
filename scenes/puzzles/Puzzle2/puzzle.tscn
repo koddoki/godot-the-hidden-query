@@ -1,34 +1,34 @@
-[gd_scene load_steps=34 format=4 uid="uid://md333pglidxr"]
+[gd_scene load_steps=34 format=4 uid="uid://dw36mssh2k7jw"]
 
-[ext_resource type="PackedScene" uid="uid://mevl074yrg3p" path="res://utils/query/queries.tscn" id="1_qwt6t"]
-[ext_resource type="Script" path="res://scenes/puzzles/Puzzle1/puzzle1.gd" id="1_v54co"]
-[ext_resource type="TileSet" uid="uid://g24mc763mfio" path="res://assets/tileset/urban_pack_teleset.tres" id="2_0l8sf"]
-[ext_resource type="Script" path="res://scenes/puzzles/Puzzle1/simulation.gd" id="2_o78na"]
-[ext_resource type="Texture2D" uid="uid://dph6iovic5te4" path="res://assets/ui/tiles/kenney_animal_pack/Round/elephant.png" id="4_3kqgm"]
-[ext_resource type="Texture2D" uid="uid://3g286yqk1cv2" path="res://assets/ui/tiles/kenney_animal_pack/Round/giraffe.png" id="4_00583"]
-[ext_resource type="Texture2D" uid="uid://ch4n0chcu4yhj" path="res://assets/ui/tiles/kenney_animal_pack/Round/hippo.png" id="6_8shx8"]
-[ext_resource type="Texture2D" uid="uid://smp8wpc05tb4" path="res://assets/ui/tiles/kenney_animal_pack/Round/monkey.png" id="7_jxrby"]
-[ext_resource type="Texture2D" uid="uid://cmlxjuj5bmm4e" path="res://assets/ui/tiles/kenney_animal_pack/Round/panda.png" id="8_lxa25"]
-[ext_resource type="Texture2D" uid="uid://dxiqawppt6xb8" path="res://assets/ui/tiles/kenney_animal_pack/Round/parrot.png" id="9_m6kow"]
-[ext_resource type="Texture2D" uid="uid://b5cunigpjmi5q" path="res://assets/ui/tiles/kenney_animal_pack/Round/penguin.png" id="10_niue3"]
-[ext_resource type="Texture2D" uid="uid://csbojfyw2khm7" path="res://assets/ui/tiles/kenney_animal_pack/Round/pig.png" id="11_2qlk3"]
-[ext_resource type="Texture2D" uid="uid://c2wtpyf8p7b28" path="res://assets/ui/tiles/kenney_animal_pack/Round/snake.png" id="12_k8t5s"]
-[ext_resource type="Texture2D" uid="uid://br6fuif06mku1" path="res://assets/ui/tiles/kenney_animal_pack/Round without details/elephant.png" id="13_upodj"]
-[ext_resource type="Texture2D" uid="uid://cxtq8yr6o5lxu" path="res://assets/ui/tiles/kenney_animal_pack/Round without details/giraffe.png" id="14_j7vqj"]
-[ext_resource type="Texture2D" uid="uid://ber1mohasc8as" path="res://assets/ui/tiles/kenney_animal_pack/Round without details/hippo.png" id="15_344rq"]
-[ext_resource type="Texture2D" uid="uid://cg6nvps5nl7sx" path="res://assets/ui/tiles/kenney_animal_pack/Round without details/monkey.png" id="16_n651j"]
-[ext_resource type="Texture2D" uid="uid://dmb6b0xjok41w" path="res://assets/ui/tiles/kenney_animal_pack/Round without details/panda.png" id="17_wikly"]
-[ext_resource type="Texture2D" uid="uid://dvjguw7eeao71" path="res://assets/ui/tiles/kenney_animal_pack/Round without details/parrot.png" id="18_23l1e"]
-[ext_resource type="Texture2D" uid="uid://bnt5lcf4ltsns" path="res://assets/ui/tiles/kenney_animal_pack/Round without details/penguin.png" id="19_nkb1i"]
-[ext_resource type="Texture2D" uid="uid://cfia8ncw6ylge" path="res://assets/ui/tiles/kenney_animal_pack/Round without details/pig.png" id="20_w43xw"]
-[ext_resource type="Texture2D" uid="uid://bvsjw4kmy7t8i" path="res://assets/ui/tiles/kenney_animal_pack/Round without details/snake.png" id="21_0d5qa"]
-[ext_resource type="FontFile" uid="uid://dx0leo3qtvu16" path="res://assets/fonts/Kenney Mini.ttf" id="23_holu3"]
-[ext_resource type="Texture2D" uid="uid://bw43wkxxts0tb" path="res://assets/ui/icons/white/checkmark.png" id="23_l4vlu"]
-[ext_resource type="Script" path="res://scenes/ui/answer_animation/answer_animation.gd" id="23_xw2qn"]
-[ext_resource type="FontFile" uid="uid://cb0ghp4306be5" path="res://assets/fonts/Kenney Pixel.ttf" id="24_af4a5"]
-[ext_resource type="Texture2D" uid="uid://lrfylv7h1hm" path="res://assets/ui/icons/white/cross.png" id="24_o7ybw"]
-[ext_resource type="PackedScene" uid="uid://bixsneybrdam" path="res://scenes/ui/answer_hint/answer_hint.tscn" id="24_va2l8"]
-[ext_resource type="Texture2D" uid="uid://w3id45hgypk8" path="res://assets/ui/icons/white/star.png" id="27_klci0"]
+[ext_resource type="Script" path="res://scenes/puzzles/Puzzle2/puzzle_2.gd" id="1_e37k3"]
+[ext_resource type="Script" path="res://scenes/puzzles/Puzzle1/simulation.gd" id="2_cdgkn"]
+[ext_resource type="TileSet" uid="uid://g24mc763mfio" path="res://assets/tileset/urban_pack_teleset.tres" id="3_trfer"]
+[ext_resource type="Texture2D" uid="uid://dph6iovic5te4" path="res://assets/ui/tiles/kenney_animal_pack/Round/elephant.png" id="4_arbbu"]
+[ext_resource type="Texture2D" uid="uid://3g286yqk1cv2" path="res://assets/ui/tiles/kenney_animal_pack/Round/giraffe.png" id="5_x7bdg"]
+[ext_resource type="Texture2D" uid="uid://ch4n0chcu4yhj" path="res://assets/ui/tiles/kenney_animal_pack/Round/hippo.png" id="6_1jidl"]
+[ext_resource type="Texture2D" uid="uid://smp8wpc05tb4" path="res://assets/ui/tiles/kenney_animal_pack/Round/monkey.png" id="7_hi1cr"]
+[ext_resource type="Texture2D" uid="uid://cmlxjuj5bmm4e" path="res://assets/ui/tiles/kenney_animal_pack/Round/panda.png" id="8_a0aom"]
+[ext_resource type="Texture2D" uid="uid://dxiqawppt6xb8" path="res://assets/ui/tiles/kenney_animal_pack/Round/parrot.png" id="9_sqch5"]
+[ext_resource type="Texture2D" uid="uid://b5cunigpjmi5q" path="res://assets/ui/tiles/kenney_animal_pack/Round/penguin.png" id="10_157km"]
+[ext_resource type="Texture2D" uid="uid://csbojfyw2khm7" path="res://assets/ui/tiles/kenney_animal_pack/Round/pig.png" id="11_ntdsw"]
+[ext_resource type="Texture2D" uid="uid://c2wtpyf8p7b28" path="res://assets/ui/tiles/kenney_animal_pack/Round/snake.png" id="12_tfbnt"]
+[ext_resource type="Texture2D" uid="uid://br6fuif06mku1" path="res://assets/ui/tiles/kenney_animal_pack/Round without details/elephant.png" id="13_ptnle"]
+[ext_resource type="Texture2D" uid="uid://cxtq8yr6o5lxu" path="res://assets/ui/tiles/kenney_animal_pack/Round without details/giraffe.png" id="14_i7b0i"]
+[ext_resource type="Texture2D" uid="uid://ber1mohasc8as" path="res://assets/ui/tiles/kenney_animal_pack/Round without details/hippo.png" id="15_gu7dl"]
+[ext_resource type="Texture2D" uid="uid://cg6nvps5nl7sx" path="res://assets/ui/tiles/kenney_animal_pack/Round without details/monkey.png" id="16_2jwsu"]
+[ext_resource type="Texture2D" uid="uid://dmb6b0xjok41w" path="res://assets/ui/tiles/kenney_animal_pack/Round without details/panda.png" id="17_bqmiq"]
+[ext_resource type="Texture2D" uid="uid://dvjguw7eeao71" path="res://assets/ui/tiles/kenney_animal_pack/Round without details/parrot.png" id="18_xc7d1"]
+[ext_resource type="Texture2D" uid="uid://bnt5lcf4ltsns" path="res://assets/ui/tiles/kenney_animal_pack/Round without details/penguin.png" id="19_mimqp"]
+[ext_resource type="Texture2D" uid="uid://cfia8ncw6ylge" path="res://assets/ui/tiles/kenney_animal_pack/Round without details/pig.png" id="20_cp0er"]
+[ext_resource type="Texture2D" uid="uid://bvsjw4kmy7t8i" path="res://assets/ui/tiles/kenney_animal_pack/Round without details/snake.png" id="21_3gh2n"]
+[ext_resource type="FontFile" uid="uid://cb0ghp4306be5" path="res://assets/fonts/Kenney Pixel.ttf" id="22_m2k8c"]
+[ext_resource type="PackedScene" uid="uid://mevl074yrg3p" path="res://utils/query/queries.tscn" id="23_40eh3"]
+[ext_resource type="PackedScene" uid="uid://bixsneybrdam" path="res://scenes/ui/answer_hint/answer_hint.tscn" id="24_87y8i"]
+[ext_resource type="Script" path="res://scenes/ui/answer_animation/answer_animation.gd" id="25_djeo2"]
+[ext_resource type="FontFile" uid="uid://dx0leo3qtvu16" path="res://assets/fonts/Kenney Mini.ttf" id="26_qli41"]
+[ext_resource type="Texture2D" uid="uid://bw43wkxxts0tb" path="res://assets/ui/icons/white/checkmark.png" id="27_6tomv"]
+[ext_resource type="Texture2D" uid="uid://lrfylv7h1hm" path="res://assets/ui/icons/white/cross.png" id="28_cjppv"]
+[ext_resource type="Texture2D" uid="uid://w3id45hgypk8" path="res://assets/ui/icons/white/star.png" id="29_4imu5"]
 
 [sub_resource type="Animation" id="Animation_1qxr4"]
 length = 0.001
@@ -312,8 +312,8 @@ _data = {
 "wrong_answer": SubResource("Animation_nh0au")
 }
 
-[node name="Puzzle1" type="Node2D"]
-script = ExtResource("1_v54co")
+[node name="Puzzle2" type="Node2D"]
+script = ExtResource("1_e37k3")
 
 [node name="BackgroundRect" type="ColorRect" parent="."]
 offset_right = 640.0
@@ -324,7 +324,7 @@ color = Color(0.488416, 0.359995, 0.666125, 1)
 metadata/_edit_lock_ = true
 
 [node name="Simulation" type="Node2D" parent="."]
-script = ExtResource("2_o78na")
+script = ExtResource("2_cdgkn")
 
 [node name="FadeRect" type="ColorRect" parent="Simulation"]
 offset_right = 640.0
@@ -340,14 +340,14 @@ metadata/_edit_lock_ = true
 texture_filter = 1
 scale = Vector2(2, 2)
 tile_map_data = PackedByteArray("AAANAAwAAAACABEAAAAOAAwAAAADABEAAAAOAA0AAAADABEAAAAOAA4AAAACAA8AAAAPAAwAAAAEABEAAAAPAA0AAAAHABEAAAAPAA4AAAABABAAAAAQAAwAAAALAAEAAAAQAA0AAAABAA8AAAAQAA4AAAABABAAAAARAAwAAAAMAAIAAAARAA0AAAAAAA8AAAARAA4AAAAAABAAAAASAAwAAAAMAAIAAAASAA0AAAABAA8AAAASAA4AAAABABAAAAATAA4AAAABABAAAAANAAsAAAACABEAAAAOAAsAAAADABEAAAAPAAsAAAAEABEAAAANAAoAAAACABEAAAAOAAoAAAADABEAAAAPAAoAAAAEABEAAAANAAkAAAACABEAAAAOAAkAAAADABEAAAAPAAkAAAAEABEAAAANAAgAAAACABEAAAAOAAgAAAADABEAAAAPAAgAAAAEABEAAAANAAcAAAACABEAAAAOAAcAAAADABEAAAAPAAcAAAAEABEAAAANAAYAAAACABEAAAAOAAYAAAADABEAAAAPAAYAAAAEABEAAAANAAUAAAACABEAAAAOAAUAAAADABEAAAAPAAUAAAAEABEAAAANAAQAAAAIABAAAAAOAAQAAAADABEAAAAPAAQAAAAEABEAAAANAAMAAAABABAAAAAOAAMAAAACAA8AAAAPAAMAAAAEABEAAAANAAIAAAAIABEAAAAOAAIAAAADABEAAAAPAAIAAAAEABEAAAANAAEAAAACABEAAAAOAAEAAAADABEAAAAPAAEAAAAEABEAAAANAAAAAAACABEAAAAOAAAAAAADABEAAAAPAAAAAAAEABEAAAAEAAcAAAAQAAAAAAAEAAgAAAAQAAEAAAAEAAkAAAAQAAIAAAAEAAoAAAAQAAMAAAALAAcAAAAQAAAAAAALAAgAAAAQAAEAAAALAAkAAAAQAAIAAAALAAoAAAAQAAMAAAAFAAgAAAAUAAIAAAAFAAkAAAAUAAEAAAAFAAoAAAAUAAMAAAAGAAgAAAAVAAIAAAAGAAkAAAASAAEAAAAGAAoAAAASAAMAAAAHAAgAAAAVAAIAAAAHAAkAAAASAAEAAAAHAAoAAAASAAMAAAAIAAgAAAAVAAIAAAAIAAkAAAASAAEAAAAIAAoAAAASAAMAAAAJAAgAAAAVAAIAAAAJAAkAAAASAAEAAAAJAAoAAAASAAMAAAAKAAgAAAAWAAIAAAAKAAkAAAAWAAEAAAAKAAoAAAAWAAMAAAAFAAcAAAAUAAAAAAAGAAcAAAASAAAAAAAHAAcAAAAVAAAAAAAIAAcAAAASAAAAAAAJAAcAAAASAAAAAAAKAAcAAAAWAAAAAAAEAAYAAAAAAAUAAAAFAAYAAAABAAUAAAAGAAYAAAABAAUAAAAHAAYAAAABAAUAAAAIAAYAAAABAAUAAAAJAAYAAAABAAUAAAAKAAYAAAABAAUAAAALAAYAAAACAAUAAAAEAAUAAAAAAAQAAAAEAAQAAAAAAAMAAAAFAAQAAAABAAMAAAAFAAUAAAABAAQAAAAGAAQAAAABAAMAAAAGAAUAAAABAAQAAAAHAAQAAAABAAMAAAAHAAUAAAABAAQAAAAIAAQAAAABAAMAAAAIAAUAAAABAAQAAAAJAAQAAAABAAMAAAAJAAUAAAABAAQAAAAKAAQAAAABAAMAAAAKAAUAAAABAAQAAAALAAQAAAACAAMAAAALAAUAAAACAAQAAAARAAcAAAARAAUAAAARAAgAAAARAAYAAAASAAcAAAASAAUAAAASAAgAAAASAAYAAAARAAkAAAAIAA4AAAASAAkAAAAJAA4AAAATAAkAAAAHAA8AAAATAAcAAAASAAUAAAATAAgAAAASAAYAAAARAAYAAAARAAQAAAASAAYAAAASAAQAAAATAAYAAAASAAQAAAARAAMAAAAIAAMAAAARAAQAAAAIAAQAAAARAAUAAAAIAAUAAAASAAMAAAAJAAMAAAASAAQAAAAJAAQAAAASAAUAAAAJAAUAAAATAAMAAAAJAAMAAAATAAQAAAAJAAQAAAATAAUAAAAJAAUAAAATAAwAAAAMAAIAAAATAA0AAAABAA8AAAAAAAsAAAAOAAUAAAABAAsAAAAJAAMAAAACAAsAAAAJAAMAAAADAAsAAAAJAAMAAAAEAAsAAAAJAAMAAAAFAAsAAAAOAAUAAAAHAAsAAAAMAAIAAAAIAAsAAAAMAAIAAAAJAAsAAAAMAAIAAAAKAAsAAAAMAAIAAAALAAsAAAANAAIAAAAMAAsAAAAPAAEAAAAQAAsAAAAPAAEAAAARAAsAAAAJAAEAAAASAAsAAAAJAAEAAAATAAsAAAAJAAEAAAAMAAoAAAAPAAEAAAAMAAkAAAAPAAEAAAAMAAgAAAAPAAEAAAAMAAcAAAAPAAEAAAAMAAYAAAAPAAEAAAAMAAUAAAAMAAAAAAAMAAEAAAAMAAEAAAADAAUAAAAMAAIAAAADAAYAAAAJAAEAAAADAAcAAAAJAAEAAAADAAgAAAAJAAIAAAADAAkAAAABAAEAAAADAAoAAAABAAEAAAACAAoAAAABAAEAAAABAAoAAAABAAEAAAABAAkAAAABAAEAAAABAAgAAAAJAAIAAAACAAgAAAAJAAIAAAACAAcAAAAJAAEAAAACAAYAAAAJAAEAAAACAAUAAAAMAAIAAAABAAUAAAAMAAIAAAACAAkAAAABAAEAAAAAAAoAAAABAAEAAAAAAAkAAAABAAEAAAAAAAgAAAAJAAIAAAAAAAcAAAAJAAEAAAAAAAYAAAAJAAEAAAAAAAUAAAAMAAIAAAABAAYAAAAJAAEAAAABAAcAAAAJAAEAAAAFAAEAAAAMAAIAAAAEAAEAAAAMAAIAAAADAAEAAAAMAAIAAAACAAEAAAAMAAIAAAAAAAEAAAAMAAIAAAABAAEAAAAMAAIAAAABAAAAAAABAAEAAAACAAAAAAABAAEAAAAAAAAAAAABAAEAAAAHAAEAAAAMAAIAAAAGAAEAAAAMAAIAAAAIAAEAAAAMAAIAAAAJAAEAAAAMAAIAAAAKAAEAAAAMAAIAAAALAAEAAAAMAAIAAAALAAAAAAABAAEAAAAMAAAAAAAPAAEAAAAKAAAAAAABAAEAAAAJAAAAAAABAAEAAAAIAAAAAAABAAEAAAAHAAAAAAABAAEAAAAGAAAAAAABAAEAAAAFAAAAAAABAAEAAAAEAAAAAAABAAEAAAADAAAAAAABAAEAAAAQAAoAAAAPAAEAAAAQAAkAAAAPAAEAAAAQAAgAAAAPAAEAAAAQAAcAAAAPAAEAAAAQAAYAAAAPAAEAAAAQAAUAAAAPAAEAAAAQAAQAAAAPAAEAAAAQAAMAAAAPAAEAAAAQAAIAAAAPAAEAAAAQAAEAAAAPAAEAAAAQAAAAAAALAAAAAAARAAIAAAAJAAEAAAASAAIAAAAJAAEAAAATAAIAAAAJAAEAAAATAAEAAAAJAAEAAAASAAEAAAAJAAEAAAARAAEAAAAJAAEAAAARAAAAAAAMAAIAAAASAAAAAAAMAAIAAAATAAAAAAAMAAIAAAARAAoAAAAJAAEAAAASAAoAAAAJAAEAAAATAAoAAAAJAAEAAAAAAA8AAAABABEAAAABAA8AAAABABEAAAACAA8AAAABABEAAAADAA8AAAABABEAAAAEAA8AAAABABEAAAAFAA8AAAABABEAAAAGAA8AAAABABEAAAAHAA8AAAABABEAAAAIAA8AAAABABEAAAAJAA8AAAABABEAAAANAA8AAAABABEAAAAOAA8AAAABABEAAAAPAA8AAAABABEAAAAQAA8AAAABABEAAAARAA8AAAAAABEAAAASAA8AAAABABEAAAATAA8AAAABABEAAAAAAAIAAAABAA8AAAAAAAMAAAABABAAAAAAAAQAAAABABEAAAABAAIAAAABAA8AAAABAAMAAAABABAAAAABAAQAAAABABEAAAACAAIAAAABAA8AAAACAAMAAAABABAAAAACAAQAAAABABEAAAADAAIAAAABAA8AAAADAAMAAAABABAAAAADAAQAAAABABEAAAAEAAIAAAABAA8AAAAEAAMAAAABABAAAAAFAAIAAAABAA8AAAAFAAMAAAABABAAAAAGAAIAAAABAA8AAAAGAAMAAAABABAAAAAHAAIAAAABAA8AAAAHAAMAAAABABAAAAAIAAIAAAABAA8AAAAIAAMAAAABABAAAAAJAAIAAAABAA8AAAAJAAMAAAABABAAAAAKAAIAAAABAA8AAAAKAAMAAAABABAAAAALAAIAAAABAA8AAAALAAMAAAABABAAAAAMAAIAAAABAA8AAAAMAAMAAAABABAAAAAMAAQAAAABABEAAAAMAAwAAAAPAAEAAAAMAA0AAAAPAAEAAAAMAA4AAAAPAAEAAAALAAwAAAABAAEAAAALAA0AAAABAAEAAAALAA4AAAABAAEAAAAKAA4AAAABAAEAAAAJAA4AAAABAAEAAAAAAA0AAAAOAAUAAAABAA0AAAAJAAUAAAACAA0AAAAJAAUAAAAAAAwAAAAJAAQAAAABAAwAAAAJAAQAAAACAAwAAAAJAAQAAAADAAwAAAAJAAQAAAAEAAwAAAAJAAQAAAAFAAwAAAAKAAQAAAAHAAwAAAABAAEAAAAIAAwAAAABAAEAAAAJAAwAAAABAAEAAAAKAAwAAAABAAEAAAAKAA0AAAABAAEAAAAJAA0AAAABAAEAAAAIAA0AAAABAAEAAAAHAA0AAAABAAEAAAAFAA0AAAAOAAUAAAAEAA0AAAAJAAUAAAADAA0AAAAJAAUAAAANAA0AAAACABEAAAANAA4AAAACABEAAAAFAA4AAAAQAAQAAAAEAA4AAAASAAQAAAADAA4AAAASAAQAAAACAA4AAAASAAQAAAABAA4AAAASAAQAAAAAAA4AAAAQAAQAAAAGAAsAAAAMAAIAAAAGAAwAAAABAAEAAAAGAA0AAAABAAEAAAAGAA4AAAABAAEAAAAHAA4AAAABAAEAAAAIAA4AAAABAAEAAAA=")
-tile_set = ExtResource("2_0l8sf")
+tile_set = ExtResource("3_trfer")
 metadata/_edit_lock_ = true
 
 [node name="PropsLayer" type="TileMapLayer" parent="Simulation/TileMapLayers"]
 texture_filter = 1
 scale = Vector2(2, 2)
 tile_map_data = PackedByteArray("AAARAAkAAAAEAAwAAAASAAkAAAAFAAwAAAATAAkAAAAFAAwAAAADAAgAAAAFAA4AAAACAAgAAAAFAA4AAAABAAgAAAAFAA4AAAAAAAgAAAAFAA4AAAAHAAoAAAAHAA8AAAAIAAoAAAAIAA8AAAALAAgAAAANAA8AAAALAAkAAAAOABEAAAAEAAkAAAAOABEAAAAEAAgAAAANAA8AAAAGAAgAAAANABAAAAAJAAgAAAANABAAAAAKAAcAAAAKAAwAAAAKAAoAAAAMABEAAAAFAAoAAAAMABEAAAACAAsAAAADAA4AAAADAAkAAAADAAwAAAASAAgAAAAMAA4AAAASAAYAAAALAA0AAAASAAcAAAALAA4AAAALAAAAAAAKAAsAAAALAAsAAAAJAAoAAAANAAEAAAAFAAkAAAAFAAcAAAAKAAwAAAASAAQAAAAJAAwAAAAEAAwAAAAJAAwAAAAFAAEAAAAPAA4AAAAFAAIAAAAPAA8AAAAGAAEAAAAQAA4AAAAGAAIAAAAQAA8AAAAPAAYAAAAWAA4AAAAPAAcAAAAWAA8AAAACAAMAAAASAA4AAAACAAQAAAASAA8AAAADAAMAAAATAA4AAAADAAQAAAATAA8AAAANAAgAAAARABAAAAANAAkAAAARABEAAAAPAAoAAAAUAA4AAAAPAAsAAAAUAA8AAAARAAAAAAAFAAgAAAAIAA4AAAALAAcAAAAJAA4AAAAMAAcAAAAIAA0AAAALAAYAAAAJAA0AAAAMAAYAAAAAAAkAAAAQAAgAAAAAAAoAAAAQAAkAAAAMAAEAAAACAAcAAAAQAAEAAAACAAcAAAAMAAAAAAADAA8AAAAQAAAAAAAFAA8AAAAQAAsAAAAGAA8AAAAQAAwAAAACAAcAAAARAAwAAAAPABAAAAARAA0AAAAPABEAAAASAAwAAAAQABAAAAASAA0AAAAQABEAAAAQAAMAAAAEAA8AAAAQAAQAAAACAAcAAAAPAAEAAAABAAoAAAAGAA0AAAADAA0AAAAGAA4AAAADAA0AAAA=")
-tile_set = ExtResource("2_0l8sf")
+tile_set = ExtResource("3_trfer")
 metadata/_edit_lock_ = true
 
 [node name="People" type="Node2D" parent="Simulation"]
@@ -355,92 +355,92 @@ metadata/_edit_lock_ = true
 [node name="Douglas" type="Sprite2D" parent="Simulation/People"]
 position = Vector2(24, 30)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("4_3kqgm")
+texture = ExtResource("4_arbbu")
 
 [node name="Garry" type="Sprite2D" parent="Simulation/People"]
 position = Vector2(400, 208)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("4_00583")
+texture = ExtResource("5_x7bdg")
 
 [node name="Henry" type="Sprite2D" parent="Simulation/People"]
 position = Vector2(88, 376)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("6_8shx8")
+texture = ExtResource("6_1jidl")
 
 [node name="Milo" type="Sprite2D" parent="Simulation/People"]
 position = Vector2(119, 30)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("7_jxrby")
+texture = ExtResource("7_hi1cr")
 
 [node name="Perry" type="Sprite2D" parent="Simulation/People"]
 position = Vector2(112, 240)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("8_lxa25")
+texture = ExtResource("8_a0aom")
 
 [node name="Percy" type="Sprite2D" parent="Simulation/People"]
 position = Vector2(248, 400)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("9_m6kow")
+texture = ExtResource("9_sqch5")
 
 [node name="Paul" type="Sprite2D" parent="Simulation/People"]
 position = Vector2(40, 392)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("10_niue3")
+texture = ExtResource("10_157km")
 
 [node name="Peter" type="Sprite2D" parent="Simulation/People"]
 position = Vector2(56, 304)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("11_2qlk3")
+texture = ExtResource("11_ntdsw")
 
 [node name="Sven" type="Sprite2D" parent="Simulation/People"]
 position = Vector2(269, 31)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("12_k8t5s")
+texture = ExtResource("12_tfbnt")
 
 [node name="Ella" type="Sprite2D" parent="Simulation/People"]
 position = Vector2(360, 448)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("13_upodj")
+texture = ExtResource("13_ptnle")
 
 [node name="Gemma" type="Sprite2D" parent="Simulation/People"]
 position = Vector2(336, 400)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("14_j7vqj")
+texture = ExtResource("14_i7b0i")
 
 [node name="Holly" type="Sprite2D" parent="Simulation/People"]
 position = Vector2(56, 200)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("15_344rq")
+texture = ExtResource("15_gu7dl")
 
 [node name="Maya" type="Sprite2D" parent="Simulation/People"]
 position = Vector2(608, 344)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("16_n651j")
+texture = ExtResource("16_2jwsu")
 
 [node name="Penny" type="Sprite2D" parent="Simulation/People"]
 position = Vector2(96, 328)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("17_wikly")
+texture = ExtResource("17_bqmiq")
 
 [node name="Penna" type="Sprite2D" parent="Simulation/People"]
 position = Vector2(576, 384)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("18_23l1e")
+texture = ExtResource("18_xc7d1")
 
 [node name="Polly" type="Sprite2D" parent="Simulation/People"]
 position = Vector2(496, 232)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("19_nkb1i")
+texture = ExtResource("19_mimqp")
 
 [node name="Pippa" type="Sprite2D" parent="Simulation/People"]
 position = Vector2(400, 264)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("20_w43xw")
+texture = ExtResource("20_cp0er")
 
 [node name="Sasha" type="Sprite2D" parent="Simulation/People"]
 position = Vector2(592, 64)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("21_0d5qa")
+texture = ExtResource("21_3gh2n")
 
 [node name="ColorRect" type="ColorRect" parent="Simulation"]
 offset_left = 32.0
@@ -457,24 +457,24 @@ offset_bottom = 448.0
 theme_override_colors/font_shadow_color = Color(0.187176, 0.187176, 0.187176, 1)
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
-theme_override_fonts/font = ExtResource("24_af4a5")
+theme_override_fonts/font = ExtResource("22_m2k8c")
 theme_override_font_sizes/font_size = 40
-text = "GOAL: Query all townsfolk on scren!"
+text = "GOAL: Query all female  townsfolk on scren!"
 vertical_alignment = 1
 
 [node name="BottomScreen" type="Node2D" parent="."]
 
-[node name="Queries" parent="BottomScreen" instance=ExtResource("1_qwt6t")]
+[node name="Queries" parent="BottomScreen" instance=ExtResource("23_40eh3")]
 offset_top = 480.0
 offset_bottom = 960.0
 database_path = "res://scenes/puzzles/Puzzle1/data.db"
 
-[node name="AnswerHint" parent="BottomScreen" instance=ExtResource("24_va2l8")]
+[node name="AnswerHint" parent="BottomScreen" instance=ExtResource("24_87y8i")]
 visible = false
 position = Vector2(0, 472)
 
 [node name="AnswerAnimation" type="Node2D" parent="."]
-script = ExtResource("23_xw2qn")
+script = ExtResource("25_djeo2")
 
 [node name="ColorRect" type="ColorRect" parent="AnswerAnimation"]
 visible = false
@@ -489,7 +489,7 @@ offset_left = 232.0
 offset_top = 600.0
 offset_right = 408.0
 offset_bottom = 680.0
-theme_override_fonts/font = ExtResource("23_holu3")
+theme_override_fonts/font = ExtResource("26_qli41")
 theme_override_font_sizes/font_size = 32
 text = "Continue"
 
@@ -498,21 +498,21 @@ visible = false
 modulate = Color(1.31397e-05, 0.791293, 0.174296, 1)
 position = Vector2(320, 408)
 scale = Vector2(4, 4)
-texture = ExtResource("23_l4vlu")
+texture = ExtResource("27_6tomv")
 
 [node name="Cross" type="Sprite2D" parent="AnswerAnimation"]
 visible = false
 modulate = Color(0.817768, 0, 0.146844, 1)
 position = Vector2(320, 408)
 scale = Vector2(4, 4)
-texture = ExtResource("24_o7ybw")
+texture = ExtResource("28_cjppv")
 
 [node name="Star" type="Sprite2D" parent="AnswerAnimation"]
 visible = false
 modulate = Color(1, 0.672884, 0.127881, 1)
 position = Vector2(320, 408)
 scale = Vector2(4, 4)
-texture = ExtResource("27_klci0")
+texture = ExtResource("29_4imu5")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AnswerAnimation"]
 libraries = {

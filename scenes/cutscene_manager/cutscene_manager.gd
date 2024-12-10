@@ -15,9 +15,6 @@ var dialogues : Array
 var puzzle := 0
 
 
-func _ready():
-	start_cutscene("res://assets/cutscenes/cutscene_1.json", 1)
-
 # If you want to go back to the map, next_puzzle should be equals to 0
 func start_cutscene(cutscene_path : String, next_puzzle : int):
 	visible = true
